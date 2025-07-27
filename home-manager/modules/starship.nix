@@ -18,8 +18,8 @@
 	  truncation_length = 2;
           truncation_symbol = "…/";
 	  substitutions = {
-	    "~/nixos-config/home-manager/modules" = "home";
-	    "~/nixos-config" = "nixos";
+	    "{config.home.homeDirectory}/nixos-config/home-manager/modules" = "home";
+	    "{config.home.homeDirectory}/nixos-config" = "nixos";
 	  };
         };
       };

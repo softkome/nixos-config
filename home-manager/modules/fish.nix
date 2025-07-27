@@ -31,7 +31,6 @@
         end
 
 	starship init fish | source
-	zozide init fish | source
       '';
     };
   };
