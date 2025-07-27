@@ -1,0 +1,13 @@
+# Nix build outputs
+result
+result-*
+.cache/
+
+# Editor temp files
+*.swp
+*.tmp
+
+# Secrets or local-only files
+secrets.nix
+*.key
+

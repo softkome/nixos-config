@@ -1,0 +1,38 @@
+scheme: "Gruvbox dark, medium"
+author: "someone"
+base00: "282828" # ----
+base01: "3c3836" # ---
+base02: "504945" # --
+base03: "665c54" # -
+base04: "bdae93" # +
+base05: "d5c4a1" # ++
+base06: "ebdbb2" # +++
+base07: "fbf1c7" # ++++
+base08: "fb4934" # red
+base09: "fe8019" # orange
+base0A: "fabd2f" # yellow
+base0B: "b8bb26" # green
+base0C: "8ec07c" # aqua/cyan
+base0D: "83a598" # blue
+base0E: "d3869b" # purple
+base0F: "d65d0e" # brown
+#
+#scheme: "Everforest Medium"
+#author: "neko@github.com/sainnhe/everforest (port by softkome)"
+#base00: "2f383e"  # background
+#base01: "374247"  # lighter background
+#base02: "4a555b"  # selection background
+#base03: "859289"  # comments, invisible
+#base04: "9da9a0"  # dark foreground
+#base05: "d3c6aa"  # default foreground
+#base06: "e4e1cd"  # light foreground
+#base07: "fdf6e3"  # lightest
+#base08: "e67e80"  # red / error
+#base09: "dbbc7f"  # orange / warnings
+#base0A: "d699b6"  # yellow / accent
+#base0B: "a7c080"  # green / success
+#base0C: "83c092"  # cyan / hints
+#base0D: "7fbbb3"  # blue / info
+#base0E: "d699b6"  # purple / keyword
+#base0F: "e69875"  # brown / deprecated
+
