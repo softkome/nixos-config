@@ -14,9 +14,6 @@
 	alias v nvim
   	alias se sudoedit
 	alias microfetch "command microfetch; echo"
-	alias .. "cd .."
-	alias hm "cd /etc/nixos/home-manager/modules/"
-  	alias nx "cd /etc/nixos/"
   	alias c clear
 
 
