@@ -15,6 +15,9 @@
   	alias se sudoedit
 	alias microfetch "command microfetch; echo"
   	alias c clear
+	alias .. "cd .."
+	alias hm "cd ~/nixos-config/home-manager/modules"
+	alias nx "cd ~/nixos-config"
 
 
         # Start Tmux automatically if not already running. No Tmux in TTY
