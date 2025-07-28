@@ -1,6 +1,6 @@
 # softkome's NixOS Config
 
-This is my personal NixOS configuration using flakes and home-manager as a module.
+This is my personal NixOS configuration
 
 ## Features
 
