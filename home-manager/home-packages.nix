@@ -47,7 +47,6 @@
     cava #audio visulliser
     cmatrix #matrix effect
     cbonsai #bonsai tree
-    zoxide #smarter cd command
 
     #wm stuff
     libsForQt5.xwaylandvideobridge #video sharing bridge
