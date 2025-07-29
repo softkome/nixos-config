@@ -17,6 +17,9 @@
           read_only = " [R]";
 	  truncation_length = 2;
           truncation_symbol = "…/";
+	  substitutions = {
+	    "nixos-config" = "nixos";
+	    "home-manager/modules" = "home";
 	  };
         };
       };
