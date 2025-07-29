@@ -15,7 +15,7 @@
 
         directory = {
           read_only = " [R]";
-	  truncation_length = 8;
+	  truncation_length = 2;
           truncation_symbol = "…/";
 	  };
         };
