@@ -1,13 +1,12 @@
 { lib, config, ... }: {
-
   options = {
-    hyprlockMod = lib.mkEnableOption "enables hyprlockMod";
+    hyprlockMod = lib.mkEnableOption "Enable custom hyprlock styling";
   };
 
   config = lib.mkIf config.hyprlockMod {
     programs.hyprlock = {
       enable = true;
-  
+
       settings = {
         general = {
           disable_loading_bar = true;
@@ -15,18 +14,18 @@
           hide_cursor = true;
           no_fade_in = false;
         };
-  
+
         label = {
           text = "$TIME";
           font_size = 96;
           font_family = "JetBrains Mono";
-          color = "rgba(235, 219, 178, 1.0)";
+          color = "rgba(235, 219, 178, 1.0)"; # Gruvbox light beige
           position = "0, 600";
           halign = "center";
           walign = "center";
-          shadow_passes = 1;
+          shadow_passes = 0; # no shadow for cleaner look
         };
-  
+
         background = [
           {
             path = "screenshot";
@@ -34,22 +33,24 @@
             blur_size = 8;
           }
         ];
-  
+
         input-field = [
           {
-            size = "200, 50";
+            size = "220, 50";
             position = "0, -80";
             monitor = "";
             dots_center = true;
+
             font_color = "rgb(235, 219, 178)";
-            inner_color = "rgb(40, 40, 40)";
-            outer_color = "rgb(60, 56, 54)";
-            outline_thickness = 5;
+            inner_color = "rgb(29, 32, 33)";    # #1D2021
+            outer_color = "rgb(29, 32, 33)";    # Match inner for borderless look
+            outline_thickness = 2;             # Minimal but visible
             placeholder_text = "password";
-            shadow_passes = 1;
+            shadow_passes = 0;                 # no drop shadow
           }
         ];
       };
     };
   };
 }
+

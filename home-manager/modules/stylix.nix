@@ -31,6 +31,7 @@
         hyprland.enable = false;
         hyprlock.enable = false;
         mako.enable = false;
+	swaync.enable = false;
       };
   
       cursor = {
