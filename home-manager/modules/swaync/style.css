@@ -1,0 +1,87 @@
+* {
+  all: unset;
+  font-family: JetBrains Mono;
+  font-size: 12px;
+  background: transparent;
+  color: #EBDBB2;
+  box-shadow: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base containers */
+window,
+.notification-center,
+.control-center {
+  background-color: #1D2021;
+  border: none;
+  padding: 8px;
+  margin: 8px;
+}
+
+/* Notification popups */
+.notification {
+  background-color: #1D2021;
+  border: none;
+  margin: 6px 0;
+  padding: 8px;
+}
+
+/* Title or header */
+.notification .title,
+.control-center .header {
+  font-weight: bold;
+  color: #EBDBB2;
+  margin-bottom: 4px;
+}
+
+/* Body text */
+.notification .body {
+  color: #EBDBB2;
+  margin: 2px 0;
+}
+
+/* Buttons and icons */
+button,
+.close-button,
+.toggle {
+  background-color: transparent;
+  color: #EBDBB2;
+  padding: 4px;
+  margin: 2px;
+  border-radius: 4px;
+}
+
+button:hover,
+.close-button:hover,
+.toggle:hover {
+  background-color: #282828;
+}
+
+/* Control center toggles */
+.toggle {
+  border: none;
+  background: transparent;
+  color: #EBDBB2;
+}
+
+/* Do Not Disturb Toggle */
+.dnd {
+  padding: 4px;
+  margin: 4px;
+  color: #EBDBB2;
+}
+
+/* Scrollbars (if any) */
+scrollbar,
+scrollbar slider {
+  background: #3C3836;
+  border-radius: 4px;
+  min-width: 4px;
+}
+
+scrollbar slider:hover {
+  background: #504945;
+}
+
