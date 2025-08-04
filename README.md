@@ -1,6 +1,6 @@
 # softkome's NixOS Config
 
-This is my personal NixOS configuration
+This is my personal NixOS configuration.
 
 ## Features
 
