@@ -16,8 +16,6 @@
         control-center-margin-left = 0;
         control-center-margin-right = 0;
 
-	dnd-toggle-visible = true;
-
         layer = "overlay";
       };
     };
