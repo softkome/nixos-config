@@ -96,6 +96,7 @@
   
           "workspace 3,class:(vesktop)"
 	  "workspace 2,class:(steam)"
+	  "workspace 2,class:(steam_app_.*)"
         
           "suppressevent maximize, class:.*"
           "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
