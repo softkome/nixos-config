@@ -10,7 +10,7 @@
       settings = {
         logo = {
 	  type = "raw";
-	  source - ./assets/fastfetchlogo.txt;
+	  source = ./assets/fastfetchlogo.txt;
 	  width = 26;
           height = 15;
           padding = {
