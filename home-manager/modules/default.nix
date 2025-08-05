@@ -16,6 +16,7 @@
     ./starship.nix
     ./stylix.nix
     ./tmux.nix
-    ./zathura.nix 
+    ./zathura.nix
+    ./fastfetch.nix
   ];
 }
