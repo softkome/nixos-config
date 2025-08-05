@@ -37,7 +37,7 @@
 	    type = "shell";
 	    key = " Shell";
 	  }
-	]
+	];
       };
     };
   };
