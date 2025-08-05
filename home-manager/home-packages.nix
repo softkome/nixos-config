@@ -16,7 +16,6 @@
     gamescope #game optimization
     gamemode #game optimization
     xfce.thunar #gui file manager
-    jrnl #cli journal
     aseprite #pixel art
     
 
