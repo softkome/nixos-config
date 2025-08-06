@@ -12,7 +12,7 @@
 	  type = "raw";
 	  source = ./assets/fastfetchlogo.txt;
 	  width = 26;
-          height = 15;
+          height = 6;
           padding = {
             top = 0;
             left = 2;

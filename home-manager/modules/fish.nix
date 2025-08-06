@@ -8,7 +8,9 @@
     programs.fish = {
       enable = true;
       shellInit = ''
-        set -g fish_greeting ""
+        function fish_greeting
+	  fastfetch
+	end
  
 	alias r ranger
 	alias v nvim

@@ -31,7 +31,7 @@
   batMod = true;
   stylixMod = true;
 
-  fastfetchMod.enable = true;
+  fastfetchMod = true;
   waybarMod = true;
   swayncMod = true;
   fuzzelMod = true;

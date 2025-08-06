@@ -15,5 +15,6 @@
     ./user.nix
     ./xdg-portal.nix
     ./stylix.nix
+    ./nh.nix
   ];
 }
