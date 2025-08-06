@@ -46,6 +46,7 @@
     cava #audio visulliser
     cmatrix #matrix effect
     cbonsai #bonsai tree
+    nh #nix helper
 
     #wm stuff
     libsForQt5.xwaylandvideobridge #video sharing bridge

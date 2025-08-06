@@ -30,6 +30,7 @@
   alacrittyMod = true;
   batMod = true;
   stylixMod = true;
+  nhMod = true;
 
   fastfetchMod = true;
   waybarMod = true;
