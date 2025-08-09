@@ -1,13 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  #### Enable NetworkManager
   networking.networkmanager.enable = true;
-
-  #### Disable Wi-Fi power saving
   networking.networkmanager.wifi.powersave = false;
-
-  #### Ensure firmware is available
   hardware.enableAllFirmware = true;
 
   #### Kernel module options for RTL8192EE
