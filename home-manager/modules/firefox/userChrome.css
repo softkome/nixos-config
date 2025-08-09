@@ -1,0 +1,85 @@
+/* Apply font and base colors */
+* {
+  font-family: "JetBrains Mono", monospace !important;
+  font-size: 12pt !important;
+  color: #EBDBB2 !important;
+  background-color: transparent !important;
+}
+
+/* Main browser frame and tab bar */
+#titlebar,
+#TabsToolbar,
+#nav-bar {
+  background-color: #1D2021 !important;
+  border: none !important;
+  box-shadow: none !important;
+  min-height: 32px !important;
+}
+
+/* Remove close, minimize, maximize buttons */
+.titlebar-buttonbox-container {
+  display: none !important;
+}
+
+/* Tabs */
+.tabbrowser-tab {
+  background-color: #1D2021 !important;
+  color: #EBDBB2 !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 10px !important;
+}
+
+.tabbrowser-tab[selected="true"] {
+  background-color: #EBDBB2 !important;
+  color: #1D2021 !important;
+}
+
+.tabbrowser-tab:hover:not([selected="true"]) {
+  background-color: #3C3836 !important;
+  color: #FBF1C7 !important;
+}
+
+/* Remove tab separators */
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+  border: none !important;
+}
+
+/* URL bar */
+#urlbar,
+#searchbar {
+  background-color: #1D2021 !important;
+  color: #EBDBB2 !important;
+  border: none !important;
+}
+
+#urlbar:hover,
+#searchbar:hover {
+  background-color: #3C3836 !important;
+  color: #FBF1C7 !important;
+}
+
+/* Toolbar buttons */
+.toolbarbutton-1 {
+  color: #EBDBB2 !important;
+  fill: #EBDBB2 !important;
+}
+
+.toolbarbutton-1:hover {
+  background-color: #3C3836 !important;
+  color: #FBF1C7 !important;
+  fill: #FBF1C7 !important;
+}
+
+/* Hide forward/back button borders */
+#back-button,
+#forward-button {
+  border: none !important;
+}
+
+/* Remove extra padding */
+#nav-bar {
+  padding: 0 !important;
+}
+

@@ -2,7 +2,7 @@
 
 {
   options = {
-    firefoxMod = lib.mkEnableOption "Enables hardened Firefox with preconfigured profile";
+    firefoxMod = lib.mkEnableOption "Enables hardened Firefox with preconfigured profile and matching UI theme";
   };
 
   config = lib.mkIf config.firefoxMod {
@@ -15,9 +15,9 @@
       ".mozilla/firefox/hardened-profile/user.js".source =
         ./user.js;
 
-      # Optional: extensions (uncomment to enable)
-      # ".mozilla/firefox/hardened-profile/extensions/uBlock0@raymondhill.net.xpi".source =
-      #   ./extensions/uBlock0.xpi;
+      # Matching UI userChrome.css
+      ".mozilla/firefox/hardened-profile/chrome/userChrome.css".source =
+        ./userChrome.css;
 
       # Make hardened profile default
       ".mozilla/firefox/profiles.ini".text = ''
