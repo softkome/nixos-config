@@ -16,8 +16,8 @@
         ./user.js;
 
       # Matching UI userChrome.css
-      ".mozilla/firefox/hardened-profile/chrome/userChrome.css".source =
-        ./userChrome.css;
+      ".mozilla/firefox/hardened-profile/chrome".source =
+        ./chrome;
 
       # Make hardened profile default
       ".mozilla/firefox/profiles.ini".text = ''
