@@ -4,6 +4,7 @@
     ./hyprland
     ./swaync
     ./waybar
+    ./firefox
     ./alacritty.nix
     ./bat.nix
     ./chromium.nix
