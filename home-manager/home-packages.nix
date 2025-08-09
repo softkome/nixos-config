@@ -17,6 +17,7 @@
     gamemode #game optimization
     xfce.thunar #gui file manager
     aseprite #pixel art
+    brave #browser
     
 
     #cli utils
