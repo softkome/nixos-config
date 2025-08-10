@@ -18,5 +18,6 @@
     ./tmux.nix
     ./zathura.nix
     ./fastfetch.nix
+    ./mimeApps.nix
   ];
 }
