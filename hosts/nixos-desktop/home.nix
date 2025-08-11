@@ -38,5 +38,4 @@
   hyprlockMod = true;
   hypridleMod = true;
   hyprpaperMod = true;
-  mimeAppsMod = true;
 }
