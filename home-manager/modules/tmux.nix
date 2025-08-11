@@ -42,7 +42,6 @@
         bind -n M-s split-window -v
         bind -n M-v split-window -h
 
-        bind -n M-o new-window -c "/etc/nixos/"
         bind -n M-Enter new-window
         bind -n M-c kill-pane
         bind -n M-q kill-window
