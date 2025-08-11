@@ -17,8 +17,8 @@
       "\\\${HOME}/.steam/root/compatibilitytools.d";
   };
 
+  # cli / tui tools
   tmuxMod.enable = true;
-  zathuraMod.enable = true;
   rangerMod.enable = true;
   fishMod = true;
   gitMod.enable = true;
@@ -26,16 +26,21 @@
   starshipMod.enable = true;
   envMod = true;
   ezaMod = true;
-  chromiumMod = true;
-  alacrittyMod = true;
   batMod = true;
-  stylixMod = true;
   fastfetchMod = true;
-  waybarMod = true;
-  swayncMod = true;
-  fuzzelMod = true;
+
+
+  # gui / desktop enviroment
+  zathuraMod.enable = true;
+  alacrittyMod = true;
+  stylixMod = true;
+
+  # wayland / hyprland
   hyprlandMod = true;
   hyprlockMod = true;
   hypridleMod = true;
   hyprpaperMod = true;
+  waybarMod = true;
+  swayncMod = true;
+  fuzzelMod = true;
 }
