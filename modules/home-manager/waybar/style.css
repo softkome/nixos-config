@@ -1,0 +1,45 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrains Mono";
+  font-weight: bold;
+  font-size: 13px;
+  min-height: 0;
+  color: #ebdbb2;
+}
+
+window#waybar {
+  background: #1d2021;
+}
+
+#workspaces button label {
+  color: #ebdbb2;
+  padding: 0 10px;
+}
+#workspaces button.active label {
+  color: #1d2021;
+}
+#workspaces button.active {
+  background: #ebdbb2;
+  margin: 3px 2px;
+}
+
+#power, #clock, #battery, #pulseaudio, #tray, #network,
+#custom-power, #custom-microphone {
+  padding: 0 10px;
+  margin: 3px 2px;
+  color: #ebdbb2;
+}
+
+#custom-microphone,
+#custom-microphone.muted {
+  min-width: 14px;
+}
+
+#custom-microphone.muted,
+#pulseaudio.muted,
+#custom-power:hover{
+  opacity: 0.6;
+}
+
+
