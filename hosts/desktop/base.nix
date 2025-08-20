@@ -2,6 +2,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/system
+    inputs.home-manager.nixosModules.default
   ];
 
   networking.hostName = hostname;

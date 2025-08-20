@@ -4,7 +4,7 @@
     useUserPackages = true;
 
     extraSpecialArgs = {
-      inherit inputs user homeStateVersion pkgs;
+      inherit inputs user homeStateVersion pkgs assetsDir;
     };
 
     users.${user} = import ../../hosts/${hostNameKey}/home.nix;
