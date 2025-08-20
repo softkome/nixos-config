@@ -1,4 +1,4 @@
-{ inputs, user, homeStateVersion, hostNameKey, pkgs, ... }: {
+{ inputs, user, homeStateVersion, hostNameKey, pkgs, assetsDir, ... }: {
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
