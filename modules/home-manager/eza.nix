@@ -1,6 +1,6 @@
 { lib, config, ... }:
 let
-  cfg = config.componenets.eza;
+  cfg = config.components.eza;
 in
   {
     config = lib.mkIf cfg {
