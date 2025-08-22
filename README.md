@@ -1,19 +1,34 @@
-# softkome's NixOS Configuration
+# softkome's Nixos Config
 
-A modular NixOS configuration with declarative system management, secrets handling, and multiple desktop environments.
+My personal Nixos Configuration
 
-## Quick Start
+## Features
 
-### 1. Clone the Repository
+- modular structure
+- themed with stylix
+- secrets with sops-nix
+- multible hosts
+
+## Structure
+
+- `flake.nix` / `flake.lock` — entry point
+- `hosts/` — machine-specific configs
+- `modules/system/` — system level modules
+- `modules/home-manager/` — user / home-manager modules
+- `assets/` — wallpapers, scripts, base16colours, etc.
+
+## Usage
+
+### Clone the repo
 
 ```bash
-git clone <your-repo-url>
-cd nixos-configuration
+git clone https://github.com/softkome/nixos-config ~/nixos-config
+cd ~/nixos-config
 ```
 
-### 2. Configure Your Host
+### Configure host and user
 
-Edit `flake.nix` and modify the hosts configuration:
+Edit `flake.nix` and modify hosts configuration:
 
 ```nix
 # Define hosts here
@@ -30,29 +45,24 @@ hosts = {
 };
 ```
 
-Replace:
-- `"your-hostname"` with your desired hostname
-- `"your-username"` with your username
-- Adjust `shell`, `kernel`, and `extraModules` as needed
+Rename `hosts/desktop` > `hosts/your-hostname/...`
 
-### 3. Set Up Age Encryption
+### Set up age encryption
 
-Create an age key for secrets management:
+Create age key for secrets management:
 
 ```bash
-# Install age if not already installed
-nix-shell -p age
+nix-shell -p sops age
 
-# Generate a new age key
+# Make this directory if it doens't exist
 age-keygen -o ~/.config/sops/age/keys.txt
 
-# Display your public key (you'll need this for the next step)
-age-keygen -y ~/.config/sops/age/keys.txt
+# Make note of the public key
 ```
 
-### 4. Configure SOPS
+### Configure SOPS
 
-Edit `.sops.yaml` and replace the example key with your public age key:
+Edit `.sops.yaml` and replace the example with your public key:
 
 ```yaml
 keys:
@@ -64,21 +74,17 @@ creation_rules:
       - *your-key
 ```
 
-**Important**: Replace `age1your_public_key_here_replace_this_entire_string` with the public key output from the previous step.
+### Create your secrets
 
-### 5. Create Your Secrets
-
-Delete the existing secrets file and create your own:
+Remove `secrets/secrets.yaml` and create your own:
 
 ```bash
-# Remove the existing secrets file
 rm secrets/secrets.yaml
 
-# Create your own secrets file
 sops secrets/secrets.yaml
 ```
 
-Add your Git configuration to the secrets file:
+Add your git username and email into secrets.yaml:
 
 ```yaml
 git:
@@ -86,45 +92,16 @@ git:
     userEmail: "your.email@example.com"
 ```
 
-Save and exit the SOPS editor.
+### Rebuild
 
-### 6. Initial System Build
-
-Perform the initial system rebuild:
+Initial rebuild:
 
 ```bash
 sudo nixos-rebuild switch --flake ./#your-hostname
 ```
 
-Replace `your-hostname` with the hostname you configured in step 2.
-
-### 7. Future Rebuilds
-
-For faster future rebuilds, use `nh` (NixOS Helper):
+Future rebuilds:
 
 ```bash
-nh os switch -H your-hostname /home/your-username/nixos-configuration
+nh os switch -H your-hostname /home/your-username/nixos-config
 ```
-
-Replace:
-- `your-hostname` with your configured hostname
-- `your-username` with your username
-
-## Configuration Options
-
-### Available Kernels
-- `zen` - Zen kernel (performance optimized)
-- `latest` - Latest stable kernel
-- `lts` - Long-term support kernel
-
-### Available Shells
-- `fish` - Fish shell (default)
-- `bash` - Bash shell
-- `zsh` - Zsh shell
-
-### Window Managers/Desktop Environments
-Available modules in `./modules/window-managers/`:
-- `hyprland.nix` - Hyprland (Wayland compositor)
-- Add your own modules as needed
-
-
