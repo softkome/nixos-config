@@ -13,9 +13,14 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, stylix, sops-nix, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -60,6 +65,7 @@
 	    ./modules/system/kernel.nix
             inputs.home-manager.nixosModules.default 
 	    stylix.nixosModules.stylix
+	    sops-nix.nixosModules.sops
 	  ]
 	  ++ cfg.extraModules;
         };

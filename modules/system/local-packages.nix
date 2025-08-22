@@ -6,5 +6,7 @@
     networkmanager #network manager package
     usbutils #usb utilities
     nh #nix helper
+    age # age keygen
+    sops # encription
   ];
 }

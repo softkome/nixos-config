@@ -7,7 +7,7 @@ in
       programs.neovim = {
         enable = true;
 	extraPackages = with pkgs; [
-	  vim.Plugins.nvim-treesitter-parsers.hyprlang
+	  vimPlugins.nvim-treesitter-parsers.hyprlang
 	];
       };
     };

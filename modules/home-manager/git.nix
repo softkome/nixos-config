@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, osConfig, ... }:
 let
   cfg = config.components.git;
   secrets = import ../../secrets.nix;
@@ -7,8 +7,8 @@ in
     config = lib.mkIf cfg {
       programs.git = {
         enable = true;
-	userName = secrets.git.userName;
-	userEmail = secrets.git.userEmail;
+	userName = builtins.readFile osConfig.sops.secrets."git/userName".path;
+	userEmail = builtins.readFile osConfig.sops.secrets."git/userEmail".path;
       };
     };
   }

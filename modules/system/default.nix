@@ -8,6 +8,8 @@
     ./home-manager.nix
     ./local-packages.nix
     ./unfree.nix
+    ./stylix.nix
+    ./sops.nix
   ];
 }
 

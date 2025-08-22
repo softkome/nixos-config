@@ -8,7 +8,7 @@ in
         enable = true;
 	shellInit = ''
 	  function fish_greeting
-	    fastfetch
+	    echo "Welcome back"
 	  end
 
 	  alias r ranger
@@ -19,7 +19,7 @@ in
 	  
 	  # Start Tmux automatically if not allready running. No Tmux is TTY
 	  if test -z "$TMUX" -a -n "$DISPLAY"
-	    tmux attack-session -t default; or tmux new-session -s default
+	    tmux attach-session -t default; or tmux new-session -s default
 	  end
 
 	  # Start UWSM

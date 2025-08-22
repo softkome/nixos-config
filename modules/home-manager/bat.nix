@@ -8,8 +8,8 @@ in
         enable = true;
 	themes = {
 	  gruvbox = {
-	    src = assetsDir/colours;
-	    file = "gruvbox.yaml";
+	    src = assetsDir;
+	    file = "colours/gruvbox.yaml";
 	  };
 	};
       };
