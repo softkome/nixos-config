@@ -7,12 +7,10 @@ in
     programs.git = {
       enable = true;
       
-      # Use the template created by sops-nix instead of reading files directly
       includes = [{
         path = osConfig.sops.templates."git-config".path;
       }];
-      
-      # Optional: Add other git configuration
+
       extraConfig = {
         init.defaultBranch = "main";
         pull.rebase = false;
