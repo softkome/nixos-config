@@ -13,6 +13,7 @@
     ./stylix.nix
     ./tmux.nix
     ./base-env.nix
+    ./eza.nix
 
     ./hyprland
     ./fuzzel/fuzzel.nix

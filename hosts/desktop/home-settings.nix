@@ -19,6 +19,7 @@
   components.stylix = true;
   components.tmux = true;
   components.baseEnv = true;
+  components.eza = true;
 
   home.sessionVariables = {
     TERMINAL = "alacritty";

@@ -20,5 +20,6 @@
     components.stylix = lib.mkEnableOption "Stylix";
     components.tmux = lib.mkEnableOption "Tmux";
     components.baseEnv = lib.mkEnableOption "Session Variables";
+    components.eza = lib.mkEnableOption "Eza";
   };
 }
