@@ -11,7 +11,7 @@ in
 	    type = "raw";
 	    source = "${assetsDir}/fastfetchlogo.txt";
 	    width = 12;
-	    hight = 4;
+	    height = 4;
 	    padding = {
 	      top = 1;
 	      left = 2;
