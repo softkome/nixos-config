@@ -1,4 +1,4 @@
-{ lib, config, ... }
+{ lib, config, ... }:
 let
   cfg = config.componenets.eza;
 in
