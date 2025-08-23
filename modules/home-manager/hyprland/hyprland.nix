@@ -75,7 +75,7 @@ in
 	    "workspace 3,class:(vesktop)"
 	    "workspace 2,class:(steam)"
 	    "workspace 2,class:(steam_app_.*)"
-
+	    
 	    "suppressevent maximize,class:.*"
 	    "opacity 0.0 override, class:^(xwaylandvideobridge)$"
             "noanim, class:^(xwaylandvideobridge)$"
