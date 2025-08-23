@@ -38,5 +38,6 @@
     gamemode # game performance
     protonup-ng # proton installs
     mangohud # performance overlay
+    prismlauncher # minecraft launcher
   ];
 }
