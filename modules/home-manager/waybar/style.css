@@ -12,16 +12,15 @@ window#waybar {
   background: #1d2021;
 }
 
-#workspaces button label {
-  color: #ebdbb2;
+#workspaces button {
+  margin: 3px 2px;
   padding: 0 10px;
+  color: #ebdbb2;
 }
-#workspaces button.active label {
-  color: #1d2021;
-}
+
 #workspaces button.active {
   background: #ebdbb2;
-  margin: 3px 2px;
+  color: #1d2021;
 }
 
 #power, #clock, #battery, #pulseaudio, #tray, #network,
