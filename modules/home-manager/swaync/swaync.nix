@@ -15,6 +15,7 @@ in
 	  contorl-center-margin-right = 0;
 	  control-center-margin-left = 0;
 	  layer = "overlay";
+	  notification-grouping = false;
 	};
       };
     };

@@ -1,3 +1,4 @@
+/* Global defaults */
 * {
   all: unset;
   font-family: "JetBrains Mono", monospace;
@@ -6,44 +7,41 @@
   background-color: transparent;
 }
 
-/* Individual notifications */
+/* Notifications */
 .notification {
+  display: flex;
+  align-items: flex-start;
   background-color: #1D2021;
-  color: #EBDBB2;
-  margin: 6px;
-  padding: 0px;
   border: 3px solid #EBDBB2;
+  margin: 0; /* remove margin to avoid background halo */
+  padding: 6px 8px;
   border-radius: 0;
   box-shadow: none;
-  display: flex;
-  align-items: left;
 }
 
-/* Icon inside notification */
-/* Target images, svg, or icon class inside notifications */
+/* Icons inside notifications (catch all cases) */
+.notification image,
 .notification .icon,
 .notification img,
 .notification svg {
-  margin-right: 8px; /* space between icon and text */
   flex-shrink: 0;
+  margin-right: 8px;
 }
 
-/* Notification content */
 .notification .title,
 .notification .body {
-  color: #EBDBB2;
   padding: 2px 0;
   flex-grow: 1;
 }
 
-/* Buttons inside notifications */
 .notification .button {
   background-color: #1D2021;
-  color: #EBDBB2;
   border: none;
   margin: 4px 2px;
   padding: 4px 8px;
   border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .notification .button:hover {
@@ -51,14 +49,12 @@
   color: #FBF1C7;
 }
 
-/* Notification rows in panel */
+/* Notification list rows */
 .notification-row {
   background-color: #1D2021;
-  color: #EBDBB2;
-  margin: 6px;
+  margin: 0; /* also remove margin here */
   padding: 6px 8px;
   border: none;
-  border-radius: 0;
   box-shadow: none;
 }
 
@@ -66,26 +62,23 @@
 .notification-row .body,
 .notification-row .app-name,
 .notification-row .time {
-  color: #EBDBB2;
+  color: inherit;
 }
 
-/* Panel (control center) */
+/* Control center */
 .control-center {
   background-color: #1D2021;
-  color: #EBDBB2;
   border: 3px solid #EBDBB2;
-  margin: 0px;
   padding: 8px;
   border-radius: 0;
 }
 
-/* Header inside control center */
 .control-center .header {
   font-weight: bold;
   padding: 4px 0;
 }
 
-/* Hide the entire Do Not Disturb toggle and text */
+/* Do Not Disturb toggle hidden */
 .control-center .dnd,
 .dnd {
   display: none !important;
@@ -94,7 +87,6 @@
 /* Clear All button */
 .control-center .clear-all {
   background-color: #1D2021;
-  color: #EBDBB2;
   border: none;
   padding: 6px 10px;
   margin: 6px 0;
@@ -107,14 +99,13 @@
   color: #FBF1C7;
 }
 
-/* Close (X) button */
+/* Close button */
 .close-button {
   min-width: 20px;
   min-height: 20px;
   margin: 4px;
   padding: 4px;
   background-color: transparent;
-  color: #EBDBB2;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
@@ -126,5 +117,15 @@
 
 .close-button image {
   color: inherit;
+}
+
+/* Strip extra spacing around notifications */
+.notification-row,
+.notification-row > box,
+.notification-row > revealer,
+.notification-row > box > * {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
 }
 
