@@ -11,12 +11,12 @@
   background-color: #1D2021;
   color: #EBDBB2;
   margin: 6px;
-  padding: 6px 8px;
-  border: none;
+  padding: 0px;
+  border: 3px solid #EBDBB2;
   border-radius: 0;
   box-shadow: none;
   display: flex;
-  align-items: center;
+  align-items: left;
 }
 
 /* Icon inside notification */
@@ -73,8 +73,8 @@
 .control-center {
   background-color: #1D2021;
   color: #EBDBB2;
-  border: none;
-  margin: 8px;
+  border: 3px solid #EBDBB2;
+  margin: 0px;
   padding: 8px;
   border-radius: 0;
 }
