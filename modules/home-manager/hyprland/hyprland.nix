@@ -36,7 +36,7 @@ in
 	  general = {
 	    gaps_in = 0;
 	    gaps_out = 0;
-	    border_size = 2;
+	    border_size = 0;
 	    "col.active_border" = "rgba(${colors.base06}ff)";
 	    "col.inactive_border" = "rgba(${colors.base01}ff)";
 	    resize_on_border = true;
@@ -47,7 +47,7 @@ in
 	  decoration = {
 	    rounding = 0;
 	    active_opacity = 1.0;
-	    inactive_opacity = 1.0;
+	    inactive_opacity = 0.9;
 	    shadow = {
 	      enabled = false;
 	    };
@@ -57,7 +57,17 @@ in
 	  };
 
 	  animations = {
-	    enabled = false;
+	    enabled = true;
+	    bezier = "easeOut, 0.25, 1, 0.5, 1";
+	    animation = [
+	      "windows, 1, 3, easeOut"
+              "windowsMove, 1, 3, easeOut"
+              "border, 1, 3, easeOut"
+              "fade, 1, 4, easeOut"
+              "workspaces, 1, 3, easeOut"
+              "layers, 1, 3, easeOut"
+              "specialWorkspace, 1, 3, easeOut"
+	    ];
 	  };
 
 	  master = {
