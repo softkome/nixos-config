@@ -36,7 +36,7 @@ in
 	  general = {
 	    gaps_in = 0;
 	    gaps_out = 0;
-	    border_size = 3;
+	    border_size = 1;
 	    "col.active_border" = "rgba(${colors.base06}ff)";
 	    "col.inactive_border" = "rgba(${colors.base01}ff)";
 	    resize_on_border = true;
