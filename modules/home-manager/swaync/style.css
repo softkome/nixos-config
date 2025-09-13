@@ -12,8 +12,8 @@
   display: flex;
   align-items: flex-start;
   background-color: #1D2021;
-  border: 3px solid #EBDBB2;
-  margin: 0; /* remove margin to avoid background halo */
+  border: 0px solid #EBDBB2;
+  margin: 8px; 
   padding: 6px 8px;
   border-radius: 0;
   box-shadow: none;
@@ -52,7 +52,7 @@
 /* Notification list rows */
 .notification-row {
   background-color: #1D2021;
-  margin: 0; /* also remove margin here */
+  margin: 0; 
   padding: 6px 8px;
   border: none;
   box-shadow: none;
@@ -68,8 +68,9 @@
 /* Control center */
 .control-center {
   background-color: #1D2021;
-  border: 3px solid #EBDBB2;
+  border: 0px solid #EBDBB2;
   padding: 8px;
+  margin: 8px;
   border-radius: 0;
 }
 
@@ -78,11 +79,7 @@
   padding: 4px 0;
 }
 
-/* Do Not Disturb toggle hidden */
-.control-center .dnd,
-.dnd {
-  display: none !important;
-}
+
 
 /* Clear All button */
 .control-center .clear-all {
@@ -103,7 +100,7 @@
 .close-button {
   min-width: 20px;
   min-height: 20px;
-  margin: 4px;
+  margin: 8px;
   padding: 4px;
   background-color: transparent;
   cursor: pointer;
