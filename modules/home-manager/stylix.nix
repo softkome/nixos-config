@@ -70,7 +70,7 @@ in
           light = "Papirus-Light";
         };
     
-        image = "${assetsDir}/wallpapers/wallpaper.jpg";
+        image = "${assetsDir}/wallpapers/wallpaper2.png";
           
       };
     };
