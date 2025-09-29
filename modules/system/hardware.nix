@@ -7,8 +7,6 @@
       vulkan-loader
       vulkan-tools
       mesa.drivers
-      rocm-opencl-icd
-      rocm-opencl-runtime
     ];
   };
 
