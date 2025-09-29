@@ -30,7 +30,7 @@
     wl-clipboard # clipboard
     zip # archiving
 
-    libsForQt5.xwaylandvideobridge # video sharing
+    xwaylandvideobridge # video sharing
     libnotify # notifications
     nix-prefetch-scripts # nix packaging
 
