@@ -1,7 +1,16 @@
 { pkgs, ... }: {
   hardware.graphics = {
     enable = true;
-    enable32Bit = true;  };
+    enable32Bit = true;
+
+    extraPackages = with pkgs; [
+      vulcan-loader
+      vulcan-tools
+      mesa.drivers
+      rocm-opencl-icd
+      rocm-opencl-runtime
+    ];
+  };
 
   services.xserver.videoDrivers = [ "amdgpu" ];
 
