@@ -29,8 +29,7 @@
     wget # file downloads
     wl-clipboard # clipboard
     zip # archiving
-
-    xwaylandvideobridge # video sharing
+ 
     libnotify # notifications
     nix-prefetch-scripts # nix packaging
 
