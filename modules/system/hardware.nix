@@ -6,7 +6,7 @@
     extraPackages = with pkgs; [
       vulkan-loader
       vulkan-tools
-      mesa.drivers
+      mesa
     ];
   };
 
