@@ -9,4 +9,10 @@
     age # age keygen
     sops # encription
   ];
+
+  nixpkgs.overlays = [
+    (final: prev: {
+      microfetch-custom = import ../../pkgs/microfetch-custom { pkgs = final; };
+    })
+  ];
 }

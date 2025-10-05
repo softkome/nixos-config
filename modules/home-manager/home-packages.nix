@@ -29,6 +29,7 @@
     wget # file downloads
     wl-clipboard # clipboard
     zip # archiving
+    microfetch-custom #custom microfetch
  
     libnotify # notifications
     nix-prefetch-scripts # nix packaging
