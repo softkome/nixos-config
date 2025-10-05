@@ -1,0 +1,23 @@
+[package]
+name = "microfetch-custom"
+version = "1.0.0"
+edition = "2021"
+
+[[bin]]
+name = "microfetch-custom"
+path = "src/main.rs"
+
+[dependencies]
+nix = { version = "0.30", features = ["fs", "hostname", "feature"] }
+libc = "0.2"
+
+[profile.dev]
+opt-level = 3
+
+[profile.release]
+strip = true
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
+
