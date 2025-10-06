@@ -8,7 +8,7 @@ in
         enable = true;
 	shellInit = ''
 	  function fish_greeting
-	    echo "Welcome back"
+	    microfetch-custom
 	  end
 
 	  alias r ranger
