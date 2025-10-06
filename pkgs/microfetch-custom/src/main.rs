@@ -1,10 +1,12 @@
 mod release;
 mod system;
 mod uptime;
+mod packages;
 
 use crate::release::{get_os_pretty_name, get_system_info};
 use crate::system::{get_root_disk_usage, get_username_and_hostname};
 use crate::uptime::get_current;
+use crate::packages::get_package_counts;
 use std::io::{Write, stdout};
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -12,12 +14,15 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         println!("Microfetch {}", env!("CARGO_PKG_VERSION"));
     } else {
         let utsname = nix::sys::utsname::uname()?;
+        let (system_pkgs, user_pkgs,) = crate::packages::get_package_counts();
         let fields = Fields {
             user_info: get_username_and_hostname(&utsname),
             os_name: get_os_pretty_name()?,
             kernel_version: get_system_info(&utsname),
             uptime: get_current()?,
             storage: get_root_disk_usage()?,
+            system_pkgs: system_pkgs.to_string(),
+            user_pkgs: user_pkgs.to_string(),
         };
         print_system_info(&fields)?;
     }
@@ -31,6 +36,8 @@ struct Fields {
     kernel_version: String,
     uptime: String,
     storage: String,
+    system_pkgs: String,
+    user_pkgs: String,
 }
 
 fn print_system_info(fields: &Fields) -> Result<(), Box<dyn std::error::Error>> {
@@ -40,6 +47,8 @@ fn print_system_info(fields: &Fields) -> Result<(), Box<dyn std::error::Error>> 
         kernel_version,
         uptime,
         storage,
+        system_pkgs,
+        user_pkgs,
     } = fields;
 
     let system_info = format!(r#"
@@ -52,6 +61,9 @@ fn print_system_info(fields: &Fields) -> Result<(), Box<dyn std::error::Error>> 
     Kernel        {kernel_version}
     Uptime        {uptime}
   󱥎  Storage (/)   {storage}
+    Packages      {system_pkgs} (System) + {user_pkgs} (User)
+
+
 "#);
 
     Ok(stdout().write_all(system_info.as_bytes())?)
