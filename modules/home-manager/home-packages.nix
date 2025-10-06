@@ -28,8 +28,7 @@
     unrar # rar extraction
     wget # file downloads
     wl-clipboard # clipboard
-    zip # archiving
-    microfetch-custom #custom microfetch
+    zip # archiving 
  
     libnotify # notifications
     nix-prefetch-scripts # nix packaging
@@ -39,5 +38,8 @@
     gamemode # game performance
     protonup-ng # proton installs
     mangohud # performance overlay
+
+    cargo #rust compiler
+    microfetch-custom #custom microfetch package
   ];
 }
