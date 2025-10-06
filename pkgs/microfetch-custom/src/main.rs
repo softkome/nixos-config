@@ -42,16 +42,17 @@ fn print_system_info(fields: &Fields) -> Result<(), Box<dyn std::error::Error>> 
         storage,
     } = fields;
 
-    let system_info = format!("
-     /\\  
-    /__\\   {user_info}
-   //  \\\\
-  
+    let system_info = format!(r#"
+
+       |\__/,|   (`\
+     _.|o o  |_   ) )     {user_info}
+   -(((---(((--------
+
     System        {os_name}
     Kernel        {kernel_version}
     Uptime        {uptime}
   󱥎  Storage (/)   {storage}
-");
+"#);
 
     Ok(stdout().write_all(system_info.as_bytes())?)
 }
