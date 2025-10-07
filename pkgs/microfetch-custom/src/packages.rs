@@ -3,24 +3,52 @@ use std::path::Path;
 use std::env;
 
 pub fn get_package_counts() -> (usize, usize, usize) {
+    // System packages
     let nix_system = count_nix_profile("/nix/var/nix/profiles/system");
     
     let user = env::var("USER").unwrap_or_default();
     let home = env::var("HOME").unwrap_or_default();
     
-    // Count user packages (regular profile + home-manager)
+    // Try multiple locations for user packages
     let mut nix_user = 0;
+    
     if !user.is_empty() {
-        // Regular user profile
-        nix_user += count_nix_profile(&format!("/nix/var/nix/profiles/per-user/{}/profile", user));
+        // Check per-user directory for any profiles
+        let per_user_dir = format!("/nix/var/nix/profiles/per-user/{}", user);
+        if let Ok(entries) = std::fs::read_dir(&per_user_dir) {
+            for entry in entries.flatten() {
+                let path = entry.path();
+                if path.is_symlink() || path.is_dir() {
+                    let path_str = path.to_string_lossy().to_string();
+                    // Skip channels
+                    if !path_str.contains("channels") {
+                        let count = count_nix_profile(&path_str);
+                        if count > 0 {
+                            nix_user += count;
+                        }
+                    }
+                }
+            }
+        }
         
-        // Home Manager profile (this is likely where your packages are!)
-        nix_user += count_nix_profile(&format!("/nix/var/nix/profiles/per-user/{}/home-manager", user));
+        // Also check home-manager in home directory
+        let hm_profile = format!("{}/.local/state/home-manager/gcroots/current-home", home);
+        if Path::new(&hm_profile).exists() {
+            let count = count_nix_profile(&hm_profile);
+            if count > 0 {
+                nix_user += count;
+            }
+        }
     }
     
-    // Count default profile
+    // Default profile (usually empty but check anyway)
     let nix_default = if !home.is_empty() {
-        count_nix_profile(&format!("{}/.nix-profile", home))
+        let default_profile = format!("{}/.nix-profile", home);
+        if Path::new(&default_profile).exists() {
+            count_nix_profile(&default_profile)
+        } else {
+            0
+        }
     } else {
         0
     };
@@ -38,7 +66,10 @@ fn count_nix_profile(profile_path: &str) -> usize {
         .args(["--query", "--requisites", profile_path])
         .output();
     
-    let Ok(out) = output else { return 0; };
+    let Ok(out) = output else { 
+        return 0; 
+    };
+    
     if !out.status.success() {
         return 0;
     }
@@ -50,6 +81,11 @@ fn count_nix_profile(profile_path: &str) -> usize {
 }
 
 fn is_valid_nix_pkg(path: &str) -> bool {
+    // Must be a directory path in nix store
+    if !path.starts_with("/nix/store/") {
+        return false;
+    }
+    
     // Get just the package name (after last /)
     let pkg = match path.rsplit('/').next() {
         Some(p) => p,
@@ -106,3 +142,4 @@ pub fn get_package_counts_combined() -> (usize, usize) {
     let (system, user, default) = get_package_counts();
     (system, user + default)
 }
+
