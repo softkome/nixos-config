@@ -14,7 +14,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         println!("Microfetch {}", env!("CARGO_PKG_VERSION"));
     } else {
         let utsname = nix::sys::utsname::uname()?;
-        let (system_pkgs, user_pkgs,) = crate::packages::get_package_counts();
+        let (system_pkgs, user_pkgs, default_pkgs) = crate::packages::get_package_counts();
+        let total_user = user_pkgs + default_pkgs;
         let fields = Fields {
             user_info: get_username_and_hostname(&utsname),
             os_name: get_os_pretty_name()?,
@@ -22,7 +23,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             uptime: get_current()?,
             storage: get_root_disk_usage()?,
             system_pkgs: system_pkgs.to_string(),
-            user_pkgs: user_pkgs.to_string(),
+            user_pkgs: total_user.to_string(),
         };
         print_system_info(&fields)?;
     }
