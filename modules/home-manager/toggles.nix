@@ -11,7 +11,6 @@
 
     components.alacritty = lib.mkEnableOption "Alacritty";
     components.bat = lib.mkEnableOption "Bat";
-    components.fastfetch = lib.mkEnableOption "Fastfetch";
     components.fish = lib.mkEnableOption "Fish Shell";
     components.neovim = lib.mkEnableOption "Neovim";
     components.ranger = lib.mkEnableOption "Ranger";

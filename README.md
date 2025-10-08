@@ -105,3 +105,10 @@ Future rebuilds:
 ```bash
 nh os switch -H your-hostname /home/your-username/nixos-config
 ```
+
+## Licences
+
+This repository contains a mix of original code and modified third-party code.
+
+- 'microfetch-custom' — Modified version of [Microfetch](https://github.com/NotAShelf/microfetch) Licensed under **GNU General Public License v3.0** (see `microfetch-custom/LICENSE`).
+- Root configuration and original files — released under [CC0 1.0 Universal (Public Domain Dedication)](./LICENSE).

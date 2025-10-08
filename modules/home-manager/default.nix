@@ -5,7 +5,6 @@
     ./bat.nix
     ./alacritty.nix
     ./ranger.nix
-    ./fastfetch.nix
     ./fish.nix
     ./git.nix
     ./neovim.nix

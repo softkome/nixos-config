@@ -10,7 +10,6 @@
 
   components.alacritty = true;
   components.bat = true;
-  components.fastfetch = true;
   components.fish = true;
   components.neovim = true;
   components.ranger = true;
