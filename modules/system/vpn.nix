@@ -1,11 +1,12 @@
-{pkgs, assetsDir, ... }: {
-  environment.systemPackages = with pkgs; [openvpn];
+{ pkgs, assetsDir, ... }: {
+  environment.systemPackages = with pkgs; [ openvpn ];
 
   services.openvpn.servers = {
     protonvpn = {
-      configFile = "config ${assetsDir}/nixosvpn.ovpn" ;
+      config = ''config ${assetsDir}/nixosvpn.ovpn'';
       autoStart = false;
       updateResolvConf = true;
     };
   };
 }
+
