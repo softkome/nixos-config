@@ -10,7 +10,6 @@
     #brave # chromium browser
     vesktop # discord
     xfce.thunar # gui file manager
-    #stremio # streaming service
 
     bottom # system monitor
     htop # process monitor
