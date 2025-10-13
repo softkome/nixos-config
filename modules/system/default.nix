@@ -10,6 +10,7 @@
     ./unfree.nix
     ./stylix.nix
     ./sops.nix
+    ./vpn.nix
   ];
 }
 
