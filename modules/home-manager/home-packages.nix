@@ -7,7 +7,6 @@
     mpv # media player
     pavucontrol # volume control
     librewolf # firefox browser
-    #brave # chromium browser
     vesktop # discord
     xfce.thunar # gui file manager
 
