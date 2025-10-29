@@ -46,6 +46,7 @@ in
           bind -n M-c kill-pane
           bind -n M-q kill-window
           bind -n M-Q kill-session
+	  bind -n M-b clear-history
           ''
   
           # Gruvbox-style status bar
