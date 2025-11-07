@@ -9,6 +9,7 @@
     librewolf # firefox browser
     vesktop # discord
     xfce.thunar # gui file manager
+    qutebrowser
 
     bottom # system monitor
     htop # process monitor
