@@ -20,5 +20,6 @@
     components.tmux = lib.mkEnableOption "Tmux";
     components.baseEnv = lib.mkEnableOption "Session Variables";
     components.eza = lib.mkEnableOption "Eza";
+    components.qutebrowser = lib.mkEnableOption "Qutebrowser";
   };
 }

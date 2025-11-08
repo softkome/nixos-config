@@ -19,6 +19,7 @@
   components.tmux = true;
   components.baseEnv = true;
   components.eza = true;
+  components.qutebrowser = true;
 
   home.sessionVariables = {
     TERMINAL = "alacritty";
