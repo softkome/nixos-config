@@ -13,6 +13,7 @@
     ./tmux.nix
     ./base-env.nix
     ./eza.nix
+    ./qutebrowser.nix
 
     ./hyprland
     ./fuzzel/fuzzel.nix
