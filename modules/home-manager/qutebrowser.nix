@@ -7,9 +7,8 @@ in
       programs.qutebrowser = {
         enable = true;
 	searchEngines = {
-	  g = "https://www.google.com/search?hl=en&q={}";
+	  google = "https://www.google.com/search?hl=en&q={}";
 	};
-
       };
     };
-  {
+  }

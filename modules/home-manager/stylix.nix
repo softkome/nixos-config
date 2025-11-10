@@ -20,7 +20,7 @@ in
       stylix = {
         enable = true;
         polarity = "dark";
-        base16Scheme = "${assetsDir}/colours/gruvbox.yaml";
+        base16Scheme = "${assetsDir}/colours/papercolour.yaml";
     
        
         targets = {
