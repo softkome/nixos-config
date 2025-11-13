@@ -14,7 +14,7 @@ in
 
 
 	  renderer = {
-	    explicit_sync = flase;
+	    explicit_sync = false;
 	  };
 
 	  cursor = {
