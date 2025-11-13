@@ -11,12 +11,6 @@ in
         enable = true;
 	systemd.enable = true;
 	settings = {
-
-
-	  renderer = {
-	    explicit_sync = false;
-	  };
-
 	  cursor = {
 	    no_hardware_cursors = false;
 	  };
