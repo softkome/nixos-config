@@ -11,6 +11,16 @@ in
         enable = true;
 	systemd.enable = true;
 	settings = {
+
+
+	  renderer = {
+	    explicit_sync = flase;
+	  };
+
+	  cursor = {
+	    no_hardware_cursors = false;
+	  };
+
 	  env = [
 	    "NIXOS_OZONE_WL=1"
 	    "XDG_CURRENT_DESKTOP=Hyprland"
