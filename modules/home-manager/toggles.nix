@@ -8,7 +8,6 @@
     components.fuzzel = lib.mkEnableOption "Fuzzel";
     components.waybar = lib.mkEnableOption "Waybar";
     components.swaync = lib.mkEnableOption "SwayNC";
-    components.eww = lib.mkEnableOption "EWW";
 
     components.alacritty = lib.mkEnableOption "Alacritty";
     components.bat = lib.mkEnableOption "Bat";

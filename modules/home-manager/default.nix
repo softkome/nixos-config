@@ -19,6 +19,5 @@
     ./fuzzel/fuzzel.nix
     ./swaync/swaync.nix
     ./waybar/waybar.nix
-    ./eww/eww.nix
   ];
 }

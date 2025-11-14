@@ -7,7 +7,6 @@
   components.fuzzel = true;
   components.waybar = true;
   components.swaync = true;
-  components.eww = true;
 
   components.alacritty = true;
   components.bat = true;
