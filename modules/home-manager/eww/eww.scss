@@ -1,0 +1,79 @@
+* {
+  all: unset;
+  font-family: "JetBrains Mono";
+  font-weight: bold;
+  font-size: 12px;
+  color: #ebdbb2;
+}
+
+window {
+  background: #1d2021;
+}
+
+.bar {
+  background: #1d2021;
+  padding: 0;
+}
+
+// Workspaces
+.workspaces {
+  button {
+    margin: 3px 2px;
+    padding: 0 10px;
+    background: transparent;
+    color: #ebdbb2;
+    border-radius: 0;
+    
+    &.active {
+      background: #ebdbb2;
+      color: #1d2021;
+    }
+  }
+}
+
+// Window title
+.window {
+  color: #ebdbb2;
+}
+
+// Modules
+.custom-power,
+.clock,
+.pulseaudio,
+.network,
+.custom-microphone,
+.tray {
+  padding: 0 10px;
+  margin: 3px 2px;
+  color: #ebdbb2;
+}
+
+// Microphone
+.custom-microphone {
+  min-width: 14px;
+  
+  &.muted {
+    min-width: 14px;
+    opacity: 0.6;
+  }
+}
+
+// Audio
+.pulseaudio {
+  &.muted {
+    opacity: 0.6;
+  }
+}
+
+// Power button
+.custom-power {
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+// Systray
+.tray {
+  padding: 0 10px;
+  margin: 3px 2px;
+}

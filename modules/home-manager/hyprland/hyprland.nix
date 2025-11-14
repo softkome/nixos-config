@@ -21,6 +21,7 @@ in
 	    "XDG_SESSION_TYPE=wayland"
 	    "XDG_SESSION_DESKTOP=Hyprland"
 	    "QT_QPA_PLATFORM=wayland"
+	    "AQ_NO_EXPLICIT_SYNC=1"
 	  ];
 
 	  monitor = ",1920x1080@75,auto,1";
@@ -61,7 +62,7 @@ in
 	  };
 
 	  animations = {
-	    enabled = true;
+	    enabled = false;
 	    bezier = "easeOut, 0.25, 1, 0.5, 1";
 	    animation = [
 	      "windows, 1, 3, easeOut"
@@ -81,6 +82,7 @@ in
 	  };
 
 	  misc = {
+	    vfr = true;
 	    force_default_wallpaper = 0;
 	    disable_hyprland_logo = true;
 	  };
