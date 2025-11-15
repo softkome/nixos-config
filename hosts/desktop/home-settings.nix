@@ -20,9 +20,10 @@
   components.baseEnv = true;
   components.eza = true;
   components.qutebrowser = true;
+  components.foot = true;
 
   home.sessionVariables = {
-    TERMINAL = "alacritty";
+    TERMINAL = "foot";
     EDITOR = "nvim";
   };
 }

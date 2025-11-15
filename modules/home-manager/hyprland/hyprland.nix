@@ -28,7 +28,7 @@ in
 
 	  # Binds variables
 	  "$mainMod" = "SUPER";
-	  "$terminal" = "alacritty";
+	  "$terminal" = "foot";
 	  "$fileManager" = "$terminal -e sh -c 'ranger'";
 	  "$menu" = "fuzzel";
 

@@ -14,6 +14,7 @@
     ./base-env.nix
     ./eza.nix
     ./qutebrowser.nix
+    ./foot.nix
 
     ./hyprland
     ./fuzzel/fuzzel.nix
