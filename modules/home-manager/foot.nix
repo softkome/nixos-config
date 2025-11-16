@@ -8,9 +8,6 @@ in
       enable = true;
 
       settings = {
-        main = {
-          font = lib.mkForce "Bold";
-	  };
         scrollback = {
           lines = 100;
         };
