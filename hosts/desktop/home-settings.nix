@@ -8,7 +8,7 @@
   components.waybar = true;
   components.swaync = true;
 
-  components.alacritty = true;
+  components.alacritty = false; #false
   components.bat = true;
   components.fish = true;
   components.neovim = true;
