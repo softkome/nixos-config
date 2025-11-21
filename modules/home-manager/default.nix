@@ -20,6 +20,5 @@
     ./fuzzel/fuzzel.nix
     ./swaync/swaync.nix
     ./waybar/waybar.nix
-    ./ashell/ashell.nix
   ];
 }
