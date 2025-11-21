@@ -20,7 +20,7 @@
     };
 
     ashell = {
-      url = "github:ryan4yin/ashell";
+      url = "github:MalpenZibo/ashell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
