@@ -26,7 +26,8 @@
     unrar # rar extraction
     wget # file downloads
     wl-clipboard # clipboard
-    zip # archiving 
+    zip # archiving
+    yt-dlp # terminal youtube
  
     libnotify # notifications
     nix-prefetch-scripts # nix packaging
