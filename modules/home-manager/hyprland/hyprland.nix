@@ -36,8 +36,6 @@ in
 	    "[[ $(pgrep - waybar) ]] || waybar"
 	    "wl-paste --type text --watch cliphist store"
 	    "wl-paste --type image --watch cliphist store"
-	    "eww daemon"
-	    "eww open bar"
 	  ];
 
 	  general = {
