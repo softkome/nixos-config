@@ -22,11 +22,11 @@ in
               all-outputs = false;
               format = "{icon}";
               format-icons = {
-                "1" = "1"; 
-                "2" = "2";
-                "3" = "3";
-                "4" = "4";
-                "5" = "5";
+                "1" = "一"; 
+                "2" = "二";
+                "3" = "三";
+                "4" = "四";
+                "5" = "五";
               };
     
               persistent-workspaces = {
@@ -58,7 +58,7 @@ in
             "custom/microphone" = {
               exec = "${assetsDir}/scripts/microphone.sh";
               return-type = "json";
-              interval = 1;
+              interval = 30;
               format = "{}";
               on-click = "pactl set-source-mute @DEFAULT_SOURCE@ toggle";
               tooltip = true;
