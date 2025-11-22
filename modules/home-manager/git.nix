@@ -11,7 +11,7 @@ in
         path = osConfig.sops.templates."git-config".path;
       }];
 
-      extraConfig = {
+      settings = {
         init.defaultBranch = "main";
         pull.rebase = false;
         push.default = "simple";
