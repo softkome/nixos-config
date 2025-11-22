@@ -5,6 +5,6 @@ in
   {
     config = lib.mkIf cfg {
       home.packages = [ pkgs.eww ];
-      xdg.configFile."eww".source = ./eww;
+      xdg.configFile."eww".source = ./.;
     };
   }
