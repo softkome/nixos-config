@@ -1,0 +1,26 @@
+(include "styles.yuck")
+
+(defwidget bar []
+  (centerbox :class "bar" :orientation "h"
+
+    ;; LEFT — Workspaces
+    (box :class "left" :spacing 8
+      (label :text workspace1)
+      (label :text workspace2)
+      (label :text workspace3)
+      (label :text workspace4)
+      (label :text workspace5)
+    )
+
+    ;; CENTER — Active window title
+    (box :class "center"
+      (label :text active_window)
+    )
+
+    ;; RIGHT — Time
+    (box :class "right"
+      (label :text time)
+    )
+  )
+)
+

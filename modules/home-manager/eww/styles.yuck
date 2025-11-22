@@ -1,0 +1,10 @@
+(defstyle bar
+  :padding "6px 10px"
+  :background "#1e1e2e"
+  :color "#cdd6f4"
+  :font-size "14px")
+
+(defstyle left :spacing "8px")
+(defstyle center :halign "center")
+(defstyle right :halign "end")
+

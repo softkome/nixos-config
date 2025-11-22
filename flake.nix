@@ -18,11 +18,6 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    ashell = {
-      url = "github:MalpenZibo/ashell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { self, nixpkgs, home-manager, stylix, sops-nix, ... }@inputs:
@@ -71,7 +66,6 @@
             inputs.home-manager.nixosModules.default 
 	    stylix.nixosModules.stylix
 	    sops-nix.nixosModules.sops
-	    inputs.ashell.homeManagerModules.ashell
 	  ]
 	  ++ cfg.extraModules;
         };

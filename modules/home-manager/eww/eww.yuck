@@ -1,0 +1,11 @@
+(include "bar.yuck")
+(include "variables.yuck")
+
+(defwindow bar
+  :monitor 0
+  :geometry (geometry :x "0" :y "0" :width "100%")
+  :stacking "fg"
+  :exclusive true
+  :anchor "top"
+  (bar))
+

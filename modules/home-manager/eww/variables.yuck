@@ -1,0 +1,15 @@
+;; Time (minimal polling)
+(defpoll time :interval "1s"
+  "date '+%H:%M'")
+
+;; Active window title (simple polling for now)
+(defpoll active_window :interval "1s"
+  "hyprctl activewindow -j | jq -r '.title'")
+
+;; Workspaces (temporary placeholders)
+(defvar workspace1 "1")
+(defvar workspace2 "2")
+(defvar workspace3 "3")
+(defvar workspace4 "4")
+(defvar workspace5 "5")
+
