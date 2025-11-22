@@ -25,7 +25,6 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
-	config.allowUnfree = true;
       };
 
       assetsDir = ./assets;
@@ -66,6 +65,7 @@
             inputs.home-manager.nixosModules.default 
 	    stylix.nixosModules.stylix
 	    sops-nix.nixosModules.sops
+	    { nixpkgs.config.allowUnfree = true; }
 	  ]
 	  ++ cfg.extraModules;
         };
