@@ -84,6 +84,11 @@ in
               format = "{:%d.%m.%Y | %H:%M}";
               format-alt = "{:%A, %B %d at %R}";
 	      tooltip = false;
+	      tooltip-format = "<big>{:%B %Y}</big>\n<tt>{calendar}</tt>";
+  	      calendar = {
+    		mode = "month";
+    		weeks = true;
+    	      };
             };
     
             "tray" = {

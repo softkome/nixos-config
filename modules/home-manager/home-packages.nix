@@ -8,7 +8,7 @@
     librewolf # firefox browser
     vesktop # discord
     xfce.thunar # gui file manager
-    protonvpm-gui # vpn
+    protonvpn-gui # vpn
 
     bottom # system monitor
     htop # process monitor
