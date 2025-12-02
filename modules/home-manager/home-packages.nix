@@ -9,7 +9,7 @@
     vesktop # discord
     xfce.thunar # gui file manager
     protonvpn-gui # vpn
-
+    
     bottom # system monitor
     htop # process monitor
     brightnessctl # brightness control

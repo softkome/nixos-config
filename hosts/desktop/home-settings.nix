@@ -21,6 +21,7 @@
   components.eza = true;
   components.qutebrowser = true;
   components.foot = true;
+  components.lf = true;
 
   home.sessionVariables = {
     TERMINAL = "foot";

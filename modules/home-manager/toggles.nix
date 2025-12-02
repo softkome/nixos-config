@@ -22,5 +22,6 @@
     components.eza = lib.mkEnableOption "Eza";
     components.qutebrowser = lib.mkEnableOption "Qutebrowser";
     components.foot = lib.mkEnableOption "Foot";
+    components.lf = lib.mkEnableOption "lf";
   };
 }

@@ -15,6 +15,7 @@
     ./eza.nix
     ./qutebrowser.nix
     ./foot.nix
+    ./lf.nix
 
     ./hyprland
     ./fuzzel/fuzzel.nix
