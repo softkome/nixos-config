@@ -91,6 +91,9 @@ in
 	    "workspace 3,class:(vesktop)"
 	    "workspace 2,class:(steam)"
 	    "workspace 2,class:(steam_app_.*)"
+
+	    "float, class:foot"
+	    "size 1100 650, class:foot"
 	    
 	    "suppressevent maximize,class:.*"
 	    "opacity 0.0 override, class:^(xwaylandvideobridge)$"
