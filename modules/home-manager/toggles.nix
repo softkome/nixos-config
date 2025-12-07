@@ -23,5 +23,6 @@
     components.qutebrowser = lib.mkEnableOption "Qutebrowser";
     components.foot = lib.mkEnableOption "Foot";
     components.lf = lib.mkEnableOption "lf";
+    components.firefox = lib.mkEnableOption "Firefox";
   };
 }

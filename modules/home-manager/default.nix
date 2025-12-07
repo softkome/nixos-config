@@ -16,6 +16,7 @@
     ./qutebrowser.nix
     ./foot.nix
     ./lf.nix
+    ./firefox.nix
 
     ./hyprland
     ./fuzzel/fuzzel.nix
