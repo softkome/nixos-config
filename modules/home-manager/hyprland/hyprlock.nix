@@ -19,11 +19,11 @@ in
             text = "$TIME";
             font_size = 96;
             font_family = "JetBrains Mono";
-            color = "rgba(235, 219, 178, 1.0)"; # Gruvbox light beige
+            color = "rgba(235, 219, 178, 1.0)";
             position = "0, 600";
             halign = "center";
             walign = "center";
-            shadow_passes = 0; # no shadow for cleaner look
+            shadow_passes = 0; 
           };
   
           background = [
@@ -42,12 +42,14 @@ in
               dots_center = true;
   
               font_color = "rgb(235, 219, 178)";
-              inner_color = "rgb(29, 32, 33)";    # #1D2021
-              outer_color = "rgb(29, 32, 33)";    # Match inner for borderless look
-              outline_thickness = 2;             # Minimal but visible
+              inner_color = "rgb(29, 32, 33)";
+              outer_color = "rgb(29, 32, 33)";
+              outline_thickness = 0;
               placeholder_text = "password";
-              shadow_passes = 0;                 # no drop shadow
-            }
+              shadow_passes = 0;
+
+	      rounding = 0;
+	    }
           ];
         };
       };
