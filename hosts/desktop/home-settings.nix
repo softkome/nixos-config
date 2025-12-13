@@ -22,7 +22,7 @@
   components.qutebrowser = true;
   components.foot = true;
   components.lf = true;
-  components.firefox = true;
+  components.firefox = false;
 
   home.sessionVariables = {
     TERMINAL = "foot";
