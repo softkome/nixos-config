@@ -9,6 +9,7 @@
     vesktop # discord
     xfce.thunar # gui file manager
     protonvpn-gui # vpn
+    prismlauncher # minecraft launcher
     
     bottom # system monitor
     htop # process monitor
