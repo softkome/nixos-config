@@ -1,6 +1,5 @@
 { config, ... }: {
   components.hyprland = true;
-  components.hyprpaper = false;
   components.hypridle = true;
   components.hyprlock = true;
 

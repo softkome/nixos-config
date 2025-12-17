@@ -68,10 +68,7 @@ in
           package = pkgs.papirus-icon-theme;
           dark = "Papirus-Dark";
           light = "Papirus-Light";
-        };
-    
-        image = "${assetsDir}/wallpapers/wallpaper3.jpg";
-          
+        }; 
       };
     };
   }

@@ -1,7 +1,6 @@
 { config, lib, ... }: {
   options = {
     components.hyprland = lib.mkEnableOption "Hyprland Window Manager";
-    components.hyprpaper = lib.mkEnableOption "Hyperpaper";
     components.hypridle = lib.mkEnableOption "Hyprpaper";
     components.hyprlock = lib.mkEnableOption "Hyprlock";
 
