@@ -10,6 +10,7 @@
     xfce.thunar # gui file manager
     protonvpn-gui # vpn
     prismlauncher # minecraft launcher
+    swww
     
     bottom # system monitor
     htop # process monitor
