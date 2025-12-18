@@ -55,7 +55,6 @@
 	    autologin = cfg.autologin;
 	    shell = cfg.shell;
 	    kernel = cfg.kernel;
-	    hostNameKey = name;
           };
 
           modules = [

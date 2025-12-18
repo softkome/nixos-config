@@ -1,4 +1,4 @@
-{ inputs, user, homeStateVersion, hostNameKey, pkgs, assetsDir, ... }: {
+{ inputs, user, homeStateVersion, hostname, pkgs, assetsDir, ... }: {
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
@@ -7,7 +7,7 @@
       inherit inputs user homeStateVersion pkgs assetsDir;
     };
 
-    users.${user} = import ../../hosts/${hostNameKey}/home.nix;
+    users.${user} = import ../../hosts/${hostname}/home.nix;
   };
 }
 
