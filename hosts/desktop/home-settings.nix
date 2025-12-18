@@ -41,12 +41,4 @@
     theme.stylix.enable = true;
     env.session.enable = true;
   };
-
-
-
-
-  home.sessionVariables = {
-    TERMINAL = "foot";
-    EDITOR = "nvim";
-  };
 }
