@@ -1,6 +1,6 @@
 { lib, config, pkgs, assetsDir, ... }:
 let
-  cfg = config.features.theme.stylix.stylix;
+  cfg = config.features.theme.stylix;
 in
   {
     config = lib.mkIf cfg.enable {
