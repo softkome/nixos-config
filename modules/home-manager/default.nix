@@ -1,26 +1,30 @@
 {
   imports = [
-    ./home-packages.nix
-    ./toggles.nix
-    ./bat.nix
-    ./alacritty.nix
-    ./ranger.nix
-    ./fish.nix
-    ./git.nix
-    ./neovim.nix
-    ./starship.nix
-    ./stylix.nix
-    ./tmux.nix
-    ./env.nix
-    ./eza.nix
-    ./qutebrowser.nix
-    ./foot.nix
-    ./lf.nix
-    ./firefox.nix
+    ./cli/bat.nix
+    ./cli/eza.nix
+    ./cli/fish.nix
+    ./cli/git.nix
+    ./cli/lf.nix
+    ./cli/neovim.nix
+    ./cli/ranger.nix
+    ./cli/starship.nix
+    ./cli/tmux.nix
 
-    ./hyprland
-    ./fuzzel/fuzzel.nix
-    ./swaync/swaync.nix
-    ./waybar/waybar.nix
+    ./gui/firefox.nix
+    ./gui/qutebrowser.nix
+
+    ./terminal/alacritty.nix
+    ./terminal/foot.nix
+
+    ./wm/hyprland
+
+    ./ui/fuzzel/fuzzel.nix
+    ./ui/swaync/swaync.nix
+    ./ui/waybar/waybar.nix
+
+    ./env.nix
+    ./home-packages.nix
+    ./stylix.nix
+    ./toggles.nix
   ];
 }
