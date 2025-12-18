@@ -57,6 +57,7 @@
 	  ]
 	  ++ cfg.extraModules;
         };
+      formatterSystem = hosts.desktop.system;
 
     in {
       nixosConfigurations = nixpkgs.lib.mapAttrs mkHost hosts;
