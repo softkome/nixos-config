@@ -1,27 +1,74 @@
-{ config, lib, ... }: {
-  options = {
-    components.hyprland = lib.mkEnableOption "Hyprland Window Manager";
-    components.hypridle = lib.mkEnableOption "Hyprpaper";
-    components.hyprlock = lib.mkEnableOption "Hyprlock";
+{ lib, ... }:
+{
+  options.features = {
+    wm = {
+      hyprland.enable =
+        lib.mkEnableOption "Hyprland window manager";
+      hypridle.enable =
+        lib.mkEnableOption "Hypridle idle daemon";
+      hyprlock.enable =
+        lib.mkEnableOption "Hyprlock screen locker";
+    };
 
-    components.fuzzel = lib.mkEnableOption "Fuzzel";
-    components.waybar = lib.mkEnableOption "Waybar";
-    components.swaync = lib.mkEnableOption "SwayNC";
+    ui = {
+      bar.waybar.enable =
+        lib.mkEnableOption "Waybar status bar";
+      notifications.swaync.enable =
+        lib.mkEnableOption "Sway Notification Center";
+      launcher.fuzzel.enable =
+        lib.mkEnableOption "Fuzzel application launcher";
+    };
 
-    components.alacritty = lib.mkEnableOption "Alacritty";
-    components.bat = lib.mkEnableOption "Bat";
-    components.fish = lib.mkEnableOption "Fish Shell";
-    components.neovim = lib.mkEnableOption "Neovim";
-    components.ranger = lib.mkEnableOption "Ranger";
-    components.git = lib.mkEnableOption "Git";
-    components.starship = lib.mkEnableOption "Starship";
-    components.stylix = lib.mkEnableOption "Stylix";
-    components.tmux = lib.mkEnableOption "Tmux";
-    components.baseEnv = lib.mkEnableOption "Session Variables";
-    components.eza = lib.mkEnableOption "Eza";
-    components.qutebrowser = lib.mkEnableOption "Qutebrowser";
-    components.foot = lib.mkEnableOption "Foot";
-    components.lf = lib.mkEnableOption "lf";
-    components.firefox = lib.mkEnableOption "Firefox";
+    terminal = {
+      enable =
+        lib.mkEnableOption "Enable a terminal emulator";
+
+      provider = lib.mkOption {
+        type = lib.types.enum [ "foot" "alacritty" ];
+        default = "foot";
+        description = "Preferred terminal emulator";
+      };
+    };
+
+    cli = {
+      shell.fish.enable =
+        lib.mkEnableOption "Fish shell";
+
+      tools = {
+        neovim.enable =
+          lib.mkEnableOption "Neovim editor";
+        git.enable =
+          lib.mkEnableOption "Git version control";
+        tmux.enable =
+          lib.mkEnableOption "Tmux terminal multiplexer";
+        bat.enable =
+          lib.mkEnableOption "Bat pager";
+        eza.enable =
+          lib.mkEnableOption "Eza file lister";
+        ranger.enable =
+          lib.mkEnableOption "Ranger file manager";
+        lf.enable =
+          lib.mkEnableOption "lf file manager";
+        starship.enable =
+          lib.mkEnableOption "Starship prompt";
+      };
+    };
+
+    gui = {
+      browser = {
+        firefox.enable =
+          lib.mkEnableOption "Firefox browser";
+        qutebrowser.enable =
+          lib.mkEnableOption "Qutebrowser browser";
+      };
+    };
+
+    
+    theme.stylix.enable =
+      lib.mkEnableOption "Stylix theming system";
+
+    env.session.enable =
+      lib.mkEnableOption "Session environment variables";
   };
 }
+

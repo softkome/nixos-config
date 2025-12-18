@@ -1,9 +1,9 @@
 { lib, config, ... }:
 let
-  cfg = config.components.starship;
+  cfg = config.features.cli.tools.starship;
 in
   {
-    config = lib.mkIf cfg {
+    config = lib.mkIf cfg.enable {
       programs.starship = {
         enable = true;
 	enableFishIntegration = true;

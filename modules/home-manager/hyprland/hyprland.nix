@@ -1,12 +1,12 @@
 { lib, config, pkgs, ... }:
 let
-  cfg = config.components.hyprland;
+  cfg = config.features.wm.hyprland;
   colors = builtins.fromJSON (builtins.readFile (pkgs.runCommand "base16.json" {} ''
     ${pkgs.yq-go}/bin/yq eval -o=json ${../../../assets/colours/gruvbox.yaml} > $out
   ''));
 in
   {
-    config = lib.mkIf cfg {
+    config = lib.mkIf cfg.enable {
       wayland.windowManager.hyprland = {
         enable = true;
 	systemd.enable = true;

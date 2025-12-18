@@ -1,9 +1,9 @@
 { lib, config, ... }:
 let
-  cfg = config.components.foot;
+  cfg = config.features.terminal;
 in
 {
-  config = lib.mkIf cfg {
+  config = lib.mkIf (cfg.enable && cfg.provider == "foot") {
     programs.foot = {
       enable = true;
       settings = {

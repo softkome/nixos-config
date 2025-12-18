@@ -1,9 +1,9 @@
 { lib, config, ... }:
 let
-  cfg = config.components.hyprlock;
+  cfg = config.features.wm.hyprlock;
 in
   {
-    config = lib.mkIf cfg {
+    config = lib.mkIf cfg.enable {
       programs.hyprlock = {
         enable = true;
   

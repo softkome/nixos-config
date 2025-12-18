@@ -1,9 +1,9 @@
 { lib, config, ... }:
 let
-  cfg = config.components.alacritty;
+  cfg = config.features.terminal;
 in
   {
-    config = lib.mkIf cfg {
+    config = lib.mkIf (cfg.enable && cfg.provider == "alacritty") {
       programs.alacritty = {
         enable = true;
 	settings = {

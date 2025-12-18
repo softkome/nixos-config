@@ -1,9 +1,9 @@
 { lib, config, ... }:
 let
-  cfg = config.components.swaync;
+  cfg = config.features.ui.notifications.swaync;
 in
   {
-    config = lib.mkIf cfg {
+    config = lib.mkIf cfg.enable {
       services.swaync = {
         enable = true;
 	style = ./style.css;

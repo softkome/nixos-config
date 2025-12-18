@@ -1,9 +1,9 @@
 { lib, config, assetsDir, ... }:
 let
-  cfg = config.components.waybar;
+  cfg = config.features.ui.bar.waybar;
 in
   {
-    config = lib.mkIf cfg {
+    config = lib.mkIf cfg.enable {
       programs.waybar = {
         enable = true;
         style = ./style.css;

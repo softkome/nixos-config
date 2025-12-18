@@ -1,9 +1,9 @@
 { lib, config, assetsDir, ... }:
 let
-   cfg = config.components.bat;
+   cfg = config.features.cli.tools.bat;
 in
   {
-    config = lib.mkIf cfg {
+    config = lib.mkIf cfg.enable {
       programs.bat = {
         enable = true;
 	themes = {

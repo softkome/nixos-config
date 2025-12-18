@@ -1,9 +1,9 @@
 { lib, config, pkgs, assetsDir, ... }:
 let
-  cfg = config.components.stylix;
+  cfg = config.features.theme.stylix.stylix;
 in
   {
-    config = lib.mkIf cfg {
+    config = lib.mkIf cfg.enable {
       home.packages = with pkgs; [
         dejavu_fonts
         jetbrains-mono

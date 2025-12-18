@@ -1,27 +1,44 @@
 { config, ... }: {
-  components.hyprland = true;
-  components.hypridle = true;
-  components.hyprlock = true;
+  features = {
+    wm = {
+      hyprland.enable = true;
+      hypridle.enable = true;
+      hyprlock.enable = true;
+    };
 
-  components.fuzzel = true;
-  components.waybar = true;
-  components.swaync = true;
+    ui = {
+      bar.waybar.enable = true;
+      notifications.swaync.enable = true;
+      launcher.fuzzel.enable = true;
+    };
 
-  components.alacritty = false; #false
-  components.bat = true;
-  components.fish = true;
-  components.neovim = true;
-  components.ranger = true;
-  components.git = true;
-  components.starship = true;
-  components.stylix = true;
-  components.tmux = true;
-  components.baseEnv = true;
-  components.eza = true;
-  components.qutebrowser = true;
-  components.foot = true;
-  components.lf = true;
-  components.firefox = false;
+    cli = {
+      shell.fish.enable = true;
+      tools = {
+        git.enable = true;
+        neovim.enable = true;
+        tmux.enable = true;
+        bat.enable = true;
+        eza.enable = true;
+        ranger.enable = true;
+        lf.enable = true;
+        starship.enable = true;
+      };
+    };
+
+    gui = {
+      browser = {
+        firefox.enable = false;
+        qutebrowser.enable = false;
+      };
+    };
+
+    theme.stylix.enable = true;
+    env.session.enable = true;
+  };
+
+
+
 
   home.sessionVariables = {
     TERMINAL = "foot";

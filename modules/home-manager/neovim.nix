@@ -1,9 +1,9 @@
 { lib, config, pkgs, ... }:
 let
-  cfg = config.components.neovim;
+  cfg = config.features.cli.tools.neovim;
 in
   {
-    config = lib.mkIf cfg {
+    config = lib.mkIf cfg.enable {
       programs.neovim = {
         enable = true;
 	plugins = with pkgs.vimPlugins; [

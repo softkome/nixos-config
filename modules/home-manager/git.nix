@@ -1,9 +1,9 @@
 { lib, config, osConfig, ... }:
 let
-  cfg = config.components.git;
+  cfg = config.features.cli.tools.git;
 in
 {
-  config = lib.mkIf cfg {
+  config = lib.mkIf cfg.enable {
     programs.git = {
       enable = true;
       

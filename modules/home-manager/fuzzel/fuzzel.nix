@@ -1,9 +1,9 @@
 { lib, config, pkgs, ... }:
 let
-  cfg = config.components.fuzzel;
+  cfg = config.features.ui.launcher.fuzzel;
 in
   {
-    config = lib.mkIf cfg {
+    config = lib.mkIf cfg.enable {
       home.packages = [
         pkgs.fuzzel
       ];

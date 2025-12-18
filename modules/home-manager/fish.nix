@@ -1,9 +1,9 @@
 { lib, config, ... }:
 let
-  cfg = config.components.fish;
+  cfg = config.features.cli.shell.fish;
 in
   {
-    config = lib.mkIf cfg {
+    config = lib.mkIf cfg.enable {
       programs.fish = {
         enable = true;
 	shellInit = ''

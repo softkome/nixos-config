@@ -1,9 +1,9 @@
 { lib, config, pkgs, ... }:
 let
-  cfg = config.components.tmux;
+  cfg = config.features.cli.tools.tmux;
 in
   {
-    config = lib.mkIf cfg {
+    config = lib.mkIf cfg.enable {
       programs.tmux = {
         enable = true;
         baseIndex = 1;

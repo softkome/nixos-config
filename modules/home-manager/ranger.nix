@@ -1,9 +1,9 @@
 { lib, config, ... }:
 let
-  cfg = config.components.ranger;
+  cfg = config.features.cli.tools.ranger;
 in
   {
-    config = lib.mkIf cfg {
+    config = lib.mkIf cfg.enable {
       programs.ranger = {
         enable = true;
         mappings = {

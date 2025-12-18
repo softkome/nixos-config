@@ -1,9 +1,9 @@
 { lib, config, pkgs, ... }: 
 let
-  cfg = config.components.qutebrowser;
+  cfg = config.features.gui.browser.qutebrowser;
 in
   {
-    config = lib.mkIf cfg {
+    config = lib.mkIf cfg.enable {
       programs.qutebrowser = {
         enable = true;
 	searchEngines = {

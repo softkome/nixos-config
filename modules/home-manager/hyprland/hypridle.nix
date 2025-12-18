@@ -1,9 +1,9 @@
 { lib, config, ... }:
 let 
-  cfg = config.components.hypridle;
+  cfg = config.features.wm.hypridle;
 in
   {
-    config = lib.mkIf cfg {
+    config = lib.mkIf cfg.enable {
       services.hypridle = {
         enable = true;
         settings = {

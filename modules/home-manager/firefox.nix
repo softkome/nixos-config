@@ -1,9 +1,9 @@
 { pkgs, lib, config, assetsDir, ...}:
 let
-  cfg = config.components.firefox;
+  cfg = config.features.gui.browser.firefox;
 in
   {
-    config = lib.mkIf cfg {
+    config = lib.mkIf cfg.enable {
       programs.firefox = {
         enable = true;
 	
