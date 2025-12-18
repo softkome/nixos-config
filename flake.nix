@@ -20,18 +20,14 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, sops-nix, ... }@inputs:
+  outputs = { nixpkgs, home-manager, stylix, sops-nix, ... }@inputs:
     let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-      };
-
       assetsDir = ./assets;
 
       # Define hosts here
       hosts = {
         "desktop" = {
+	  system = "x86_64-linux";
           user = "softkome";
           hostname = "desktop";
           stateVersion = "25.05";
@@ -44,17 +40,11 @@
 
       mkHost = name: cfg:
         nixpkgs.lib.nixosSystem {
-          system = system;
+          system = cfg.system;
           specialArgs = {
-            inherit inputs;
-	    inherit system;
-	    inherit assetsDir;
-            user = cfg.user;
-            hostname = cfg.hostname;
+            inherit inputs assetsDir;
+	    inherit (cfg) user hostname autologin shell kernel;
             homeStateVersion = cfg.stateVersion;
-	    autologin = cfg.autologin;
-	    shell = cfg.shell;
-	    kernel = cfg.kernel;
           };
 
           modules = [
@@ -64,7 +54,6 @@
             inputs.home-manager.nixosModules.default 
 	    stylix.nixosModules.stylix
 	    sops-nix.nixosModules.sops
-	    { nixpkgs.config.allowUnfree = true; }
 	  ]
 	  ++ cfg.extraModules;
         };
