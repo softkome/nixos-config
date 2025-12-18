@@ -1,6 +1,6 @@
 { lib, config, ... }:
 let
-  cfg = config.features.env.session.enable;
+  cfg = config.features.env.session;
 in
   {
     config = lib.mkIf cfg.enable {

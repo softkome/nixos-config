@@ -11,7 +11,7 @@
     ./starship.nix
     ./stylix.nix
     ./tmux.nix
-    ./base-env.nix
+    ./env.nix
     ./eza.nix
     ./qutebrowser.nix
     ./foot.nix
