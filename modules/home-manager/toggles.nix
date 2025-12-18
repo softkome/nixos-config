@@ -56,8 +56,6 @@
 
     gui = {
       browser = {
-        firefox.enable =
-          lib.mkEnableOption "Firefox browser";
         qutebrowser.enable =
           lib.mkEnableOption "Qutebrowser browser";
       };
