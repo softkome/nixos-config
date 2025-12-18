@@ -15,7 +15,7 @@ My personal Nixos Configuration
 - `hosts/` — machine-specific configs
 - `modules/system/` — system level modules
 - `modules/home-manager/` — user / home-manager modules
-- `assets/` — wallpapers, scripts, base16colours, etc.
+- `assets/` — scripts, base16colours, etc.
 
 ## Usage
 
@@ -34,6 +34,7 @@ Edit `flake.nix` and modify hosts configuration:
 # Define hosts here
 hosts = {
   "your-hostname" = {
+    system = "your system";
     user = "your-username";
     hostname = "your-hostname";
     stateVersion = "25.05";
