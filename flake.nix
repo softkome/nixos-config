@@ -60,5 +60,8 @@
 
     in {
       nixosConfigurations = nixpkgs.lib.mapAttrs mkHost hosts;
+
+      formatter.${formatterSystem} =
+        (import nixpkgs { system = formatterSystem; }).nixfmt-rfc-style;
     };
 }
