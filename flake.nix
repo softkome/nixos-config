@@ -38,7 +38,7 @@
 	  autologin = true;
 	  shell = "fish";
 	  kernel = "zen"; # or "latest" or "lts"
-	  extraModules = [ ./modules/window-managers/hyprland.nix ];
+	  extraModules = [ ./modules/system/wm/hyprland.nix ];
         };
       };
 
