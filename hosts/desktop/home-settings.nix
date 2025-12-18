@@ -12,6 +12,11 @@
       launcher.fuzzel.enable = true;
     };
 
+    terminal = {
+      enable = true;
+      provider = "foot";
+    };
+
     cli = {
       shell.fish.enable = true;
       tools = {
