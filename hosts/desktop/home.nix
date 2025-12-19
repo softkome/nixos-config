@@ -43,7 +43,6 @@
 
     gui = {
       browser = {
-        firefox.enable = false;
         qutebrowser.enable = false;
       };
     };

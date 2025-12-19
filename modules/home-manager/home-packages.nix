@@ -10,7 +10,7 @@
     xfce.thunar # gui file manager
     protonvpn-gui # vpn
     prismlauncher # minecraft launcher
-    swww
+    swww # wallpaper daemon
     
     bottom # system monitor
     htop # process monitor
@@ -30,6 +30,7 @@
     wl-clipboard # clipboard
     zip # archiving
     yt-dlp # terminal youtube
+    alejandra
  
     libnotify # notifications
     nix-prefetch-scripts # nix packaging
