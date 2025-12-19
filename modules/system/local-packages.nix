@@ -1,8 +1,7 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    vim  # text editor
-    pulseaudio  # for pactl CLI usage
+    vim # text editor
+    pulseaudio # for pactl CLI usage
     networkmanager #network manager package
     usbutils #usb utilities
     nh #nix helper
@@ -12,7 +11,7 @@
 
   nixpkgs.overlays = [
     (final: prev: {
-      microfetch-custom = import ../../pkgs/microfetch-custom { pkgs = final; };
+      microfetch-custom = import ../../pkgs/microfetch-custom {pkgs = final;};
     })
   ];
 }

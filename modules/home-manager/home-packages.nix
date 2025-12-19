@@ -1,7 +1,5 @@
-{ pkgs, ... }: {
-
+{pkgs, ...}: {
   home.packages = with pkgs; [
-
     imv # image viewer
     mpv # media player
     pavucontrol # volume control
@@ -11,7 +9,7 @@
     protonvpn-gui # vpn
     prismlauncher # minecraft launcher
     swww # wallpaper daemon
-    
+
     bottom # system monitor
     htop # process monitor
     brightnessctl # brightness control
@@ -31,7 +29,7 @@
     zip # archiving
     yt-dlp # terminal youtube
     alejandra
- 
+
     libnotify # notifications
     nix-prefetch-scripts # nix packaging
 

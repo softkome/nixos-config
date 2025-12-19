@@ -1,4 +1,8 @@
-{ user, config, ... }: {
+{
+  user,
+  config,
+  ...
+}: {
   sops = {
     defaultSopsFile = ../../secrets/secrets.yaml;
     defaultSopsFormat = "yaml";
@@ -9,7 +13,7 @@
       "git/userName" = {};
       "git/userEmail" = {};
     };
-    
+
     # Add this template
     templates."git-config" = {
       content = ''

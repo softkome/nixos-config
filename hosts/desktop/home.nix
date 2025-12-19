@@ -1,4 +1,9 @@
-{ user, homeStateVersion, config, ... }: {
+{
+  user,
+  homeStateVersion,
+  config,
+  ...
+}: {
   imports = [
     ../../modules/home-manager
   ];

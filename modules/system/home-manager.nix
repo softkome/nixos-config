@@ -1,4 +1,12 @@
-{ inputs, user, homeStateVersion, hostname, pkgs, assetsDir, ... }: {
+{
+  inputs,
+  user,
+  homeStateVersion,
+  hostname,
+  pkgs,
+  assetsDir,
+  ...
+}: {
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
@@ -10,4 +18,3 @@
     users.${user} = import ../../hosts/${hostname}/home.nix;
   };
 }
-

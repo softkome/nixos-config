@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -10,7 +10,7 @@
     ];
   };
 
-  services.xserver.videoDrivers = [ "amdgpu" ];
+  services.xserver.videoDrivers = ["amdgpu"];
 
   # Audio
   services.pipewire = {
@@ -26,6 +26,5 @@
 
   # Printing
   services.printing.enable = true;
-  services.printing.drivers = [ pkgs.hplip pkgs.gutenprint ];
+  services.printing.drivers = [pkgs.hplip pkgs.gutenprint];
 }
-

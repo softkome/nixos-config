@@ -1,5 +1,4 @@
-{ lib, ... }:
-{
+{lib, ...}: {
   options.features = {
     wm = {
       hyprland.enable =
@@ -24,7 +23,7 @@
         lib.mkEnableOption "Enable a terminal emulator";
 
       provider = lib.mkOption {
-        type = lib.types.enum [ "foot" "alacritty" ];
+        type = lib.types.enum ["foot" "alacritty"];
         default = "foot";
         description = "Preferred terminal emulator";
       };
@@ -61,7 +60,6 @@
       };
     };
 
-    
     theme.stylix.enable =
       lib.mkEnableOption "Stylix theming system";
 
@@ -69,4 +67,3 @@
       lib.mkEnableOption "Session environment variables";
   };
 }
-
