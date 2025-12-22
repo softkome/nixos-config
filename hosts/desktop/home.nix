@@ -40,7 +40,7 @@
         tmux.enable = true;
         bat.enable = true;
         eza.enable = true;
-        ranger.enable = true;
+        ranger.enable = false;
         lf.enable = true;
         starship.enable = true;
       };
