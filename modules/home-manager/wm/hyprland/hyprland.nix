@@ -32,7 +32,7 @@ in {
         # Binds variables
         "$mainMod" = "SUPER";
         "$terminal" = "foot";
-        "$fileManager" = "$terminal -e sh -c 'ranger'";
+        "$fileManager" = "$terminal -e lf";
         "$menu" = "fuzzel";
 
         exec-once = [

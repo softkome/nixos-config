@@ -9,14 +9,13 @@ in {
   config = lib.mkIf cfg.enable {
     programs.lf = {
       enable = true;
-
       commands = {
         rename = ''
-          %{{{
-                   printf "Rename '%s' to: " "$f"
-                   read new
-                   [ -n "$new" ] && mv -- "$f" "$(dirname "$f")/$new"
-                 }}}
+          %{
+          printf "Rename '%s' to: " "$f"
+          read new
+          [ -n "$new" ] && mv -- "$f" "$(dirname "$f")/$new"
+          }
         '';
       };
 
