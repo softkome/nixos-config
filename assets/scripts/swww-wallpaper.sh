@@ -8,6 +8,5 @@ choice="$(ls -1 "$WALLPAPER_DIR" | fuzzel --dmenu --prompt 'Wallpaper: ')"
 [ -z "$choice" ] && exit 0
 
 swww img "$WALLPAPER_DIR/$choice" \
-  --transition-type grow \
+  --transition-type none \
   --transition-duration 0.6
-

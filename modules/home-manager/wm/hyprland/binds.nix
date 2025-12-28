@@ -12,7 +12,7 @@
       "$mainMod,       L, exec, loginctl lock-session"
       "$mainMod,       P, exec, hyprpicker -an"
       "$mainMod,       N, exec, swaync-client -t"
-      "$mainMod SHIFT, W, exec, $(assetsDir)/scripts/swww-wallpaper.sh"
+      "$mainMod SHIFT, W, exec, ${assetsDir}/scripts/swww-wallpaper.sh"
       ", Print, exec, grimblast --notify --freeze copysave area /tmp/screenshots"
 
       # Moving focus
