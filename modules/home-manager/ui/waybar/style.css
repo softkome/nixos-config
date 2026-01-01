@@ -36,23 +36,10 @@ window#waybar {
 #tray,
 #network,
 #custom-power,
-#pulseaudio#sink,
-#pulseaudio#mic {
+#pulseaudio#microphone
+#pulseaudio {
   padding: 0px 10px;
   margin: 1px 2px;
   color: #ebdbb2;
-}
-
-/* Microphone sizing */
-#pulseaudio#mic,
-#pulseaudio#mic.source-muted {
-  min-width: 14px;
-}
-
-/* Muted / inactive states */
-#pulseaudio#sink.muted,
-#pulseaudio#mic.source-muted,
-#custom-power:hover {
-  opacity: 0.6;
 }
 

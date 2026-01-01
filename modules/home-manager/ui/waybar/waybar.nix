@@ -17,7 +17,7 @@ in {
           height = 30;
           modules-left = ["hyprland/workspaces"];
           modules-center = ["hyprland/window"];
-          modules-right = ["custom/microphone" "pulseaudio#sink" "pulseaudio#mic" "network" "custom/power" "clock" "tray"];
+          modules-right = ["pulseaudio" "pulseaudio#microphone" "network" "custom/power" "clock" "tray"];
           "hyprland/workspaces" = {
             disable-scroll = true;
             show-special = true;
@@ -47,21 +47,32 @@ in {
             tooltip = false;
           };
 
-	  "pulseaudio#sink" = {
-	    format = "{icon} {volume}%";
-	    format-muted = "";
-	    tooltip = false;
-	    on-click = "pavucontrol";
-	    scroll-step = "5";
+	  "pulseaudio" = {
+            format = "{icon} {volume}%";
+            format-bluetooth = "{icon} {volume}%";
+            format-bluetooth-muted = "󰝟 {icon}";
+            format-muted = "󰝟";
+            format-icons = {
+              headphone = "";
+              hands-free = "";
+              headset = "";
+              phone = "";
+              portable = "";
+              car = "";
+              default = ["" "" ""];
+            };
 	  };
 
-	  "pulseaudio#mic" = {
-	    format = "{icon}";
-	    format-source = "󰍬";
-	    format-source-muted = "󰍭";
-	    tooltip = false;
-	    on-click = "pactl set-source-mute @DEFAULT_SOURCE@ toggle";
+	  "pulseaudio#microphone" = {
+  	    format = "{format_source}";
+  	    format-source = "󰍬 {volume}%";
+  	    format-source-muted = "󰍭 {volume}%";
+  	    on-click = "pactl set-source-mute @DEFAULT_SOURCE@ toggle";
+  	    on-scroll-up = "pactl set-source-volume @DEFAULT_SOURCE@ +5%";
+  	    on-scroll-down = "pactl set-source-volume @DEFAULT_SOURCE@ -5%";
+  	    scroll-step = 5;
 	  };
+        
 
           "network" = {
             format-wifi = "󰤨 {essid}";
