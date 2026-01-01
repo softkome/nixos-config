@@ -17,7 +17,7 @@ in {
           height = 30;
           modules-left = ["hyprland/workspaces"];
           modules-center = ["hyprland/window"];
-          modules-right = ["custom/microphone" "pulseaudio" "network" "custom/power" "clock" "tray"];
+          modules-right = ["custom/microphone" "pulseaudio#sink" "pulseaudio#mic" "network" "custom/power" "clock" "tray"];
           "hyprland/workspaces" = {
             disable-scroll = true;
             show-special = true;
@@ -47,6 +47,22 @@ in {
             tooltip = false;
           };
 
+	  "pulseaudio#sink" = {
+	    format = "{icon} {volume}%";
+	    format-muted = "";
+	    tooltip = false;
+	    on-click = "pavucontrol";
+	    scroll-step = "5";
+	  };
+
+	  "pulseaudio#mic" = {
+	    format = "{icon}";
+	    format-source = "󰍬";
+	    format-source-muted = "󰍭";
+	    tooltip = false;
+	    on-click = "pactl set-source-mute @DEFAULT_SOURCE@ toggle";
+	  };
+
           "network" = {
             format-wifi = "󰤨 {essid}";
             format-ethernet = "󰈀 Wired";
@@ -56,31 +72,6 @@ in {
             tooltip-format-ethernet = "Interface: {ifname}\nIP: {ipaddr}";
             tooltip-format-disconnected = "No connection";
             interval = 2;
-          };
-
-          "custom/microphone" = {
-            exec = "${assetsDir}/scripts/microphone.sh";
-            return-type = "json";
-            interval = 30;
-            format = "{}";
-            on-click = "pactl set-source-mute @DEFAULT_SOURCE@ toggle";
-            tooltip = true;
-          };
-
-          "pulseaudio" = {
-            format = "{icon} {volume}%";
-            format-bluetooth = "{icon} {volume}% ";
-            format-muted = "";
-            format-icons = {
-              "headphones" = "";
-              "handsfree" = "";
-              "headset" = "";
-              "phone" = "";
-              "portable" = "";
-              "car" = "";
-              "default" = ["" ""];
-            };
-            on-click = "pavucontrol";
           };
 
           "clock" = {
