@@ -61,6 +61,7 @@ in {
               car = "";
               default = ["" "" ""];
             };
+	    tooltip = false;
           };
 
           "pulseaudio#microphone" = {
