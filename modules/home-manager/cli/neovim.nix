@@ -14,13 +14,10 @@ in {
         nvim-surround
       ];
       extraLuaConfig = ''
-        require("nvim-autopairs").setup {}
-        require("nvim-surround").setup {}
+               require("nvim-autopairs").setup {}
+               require("nvim-surround").setup {}
         vim.opt.number = true
       '';
-      extraPackages = with pkgs; [
-        vimPlugins.nvim-treesitter-parsers.hyprlang
-      ];
     };
   };
 }

@@ -47,7 +47,7 @@ in {
             tooltip = false;
           };
 
-	  "pulseaudio" = {
+          "pulseaudio" = {
             format = "{icon} {volume}%";
             format-bluetooth = "{icon} {volume}%";
             format-bluetooth-muted = "󰝟 {icon}";
@@ -61,18 +61,17 @@ in {
               car = "";
               default = ["" "" ""];
             };
-	  };
+          };
 
-	  "pulseaudio#microphone" = {
-  	    format = "{format_source}";
-  	    format-source = "󰍬 {volume}%";
-  	    format-source-muted = "󰍭 {volume}%";
-  	    on-click = "pactl set-source-mute @DEFAULT_SOURCE@ toggle";
-  	    on-scroll-up = "pactl set-source-volume @DEFAULT_SOURCE@ +5%";
-  	    on-scroll-down = "pactl set-source-volume @DEFAULT_SOURCE@ -5%";
-  	    scroll-step = 5;
-	  };
-        
+          "pulseaudio#microphone" = {
+            format = "{format_source}";
+            format-source = "󰍬 {volume}%";
+            format-source-muted = "󰍭 {volume}%";
+            on-click = "pactl set-source-mute @DEFAULT_SOURCE@ toggle";
+            on-scroll-up = "pactl set-source-volume @DEFAULT_SOURCE@ +5%";
+            on-scroll-down = "pactl set-source-volume @DEFAULT_SOURCE@ -5%";
+            scroll-step = 5;
+          };
 
           "network" = {
             format-wifi = "󰤨 {essid}";

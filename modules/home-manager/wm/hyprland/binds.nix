@@ -1,4 +1,4 @@
-{ assetsDir, ...}: {
+{assetsDir, ...}: {
   wayland.windowManager.hyprland.settings = {
     bind = [
       "$mainMod SHIFT, Return, exec, $terminal"
