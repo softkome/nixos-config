@@ -28,7 +28,7 @@
     wl-clipboard # clipboard
     zip # archiving
     yt-dlp # terminal youtube
-    alejandra
+    alejandra # nix formater
 
     libnotify # notifications
     nix-prefetch-scripts # nix packaging
