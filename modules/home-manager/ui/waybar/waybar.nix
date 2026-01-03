@@ -72,6 +72,7 @@ in {
             on-scroll-up = "pactl set-source-volume @DEFAULT_SOURCE@ +5%";
             on-scroll-down = "pactl set-source-volume @DEFAULT_SOURCE@ -5%";
             scroll-step = 5;
+	    tooltip = false;
           };
 
           "network" = {
