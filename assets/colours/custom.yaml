@@ -1,0 +1,20 @@
+scheme: "Petrichor"
+author: "oceanicc (base16 mapping by ChatGPT)"
+base00: "242729" # background
+base01: "44444c" # darker surface
+base02: "77767b" # selection / subtle highlight (derived, already used in spicetify)
+base03: "77767b" # comments / secondary (intentional duplicate, allowed)
+base04: "c7c9cc" # light gray
+base05: "dedede" # foreground
+base06: "dedede" # light foreground
+base07: "ffffff" # brightest (stylix often ignores this anyway)
+
+base08: "9c6b7a" # red / error
+base09: "c4afa2" # orange / warm accent
+base0A: "e0cca8" # yellow
+base0B: "8a9887" # green (PRIMARY ACCENT)
+base0C: "86a3a6" # cyan / teal
+base0D: "8d96bd" # blue
+base0E: "b694b6" # purple
+base0F: "ae808f" # extra accent (bright red)
+

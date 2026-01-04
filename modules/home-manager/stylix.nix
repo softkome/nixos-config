@@ -24,7 +24,7 @@ in {
     stylix = {
       enable = true;
       polarity = "dark";
-      base16Scheme = "${assetsDir}/colours/gruvbox.yaml";
+      base16Scheme = "${assetsDir}/colours/custom.yaml";
 
       targets = {
         neovim.enable = true;
