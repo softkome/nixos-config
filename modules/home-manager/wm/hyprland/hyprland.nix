@@ -45,8 +45,8 @@ in {
           gaps_in = 0;
           gaps_out = 0;
           border_size = 0;
-          "col.active_border" = colors.base06;
-          "col.inactive_border" = colors.base01;
+          "col.active_border" = "rgb(${colors.base06})";
+          "col.inactive_border" = "rgb(${colors.base01})";
           resize_on_border = true;
           allow_tearing = false;
           layout = "master";
