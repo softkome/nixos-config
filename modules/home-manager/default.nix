@@ -25,6 +25,5 @@
     ./home-packages.nix
     ./stylix.nix
     ./toggles.nix
-    ./colours.nix
   ];
 }
