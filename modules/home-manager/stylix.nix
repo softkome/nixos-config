@@ -7,20 +7,7 @@
 }: let
   cfg = config.features.theme.stylix;
 in {
-  config = lib.mkIf cfg.enable {
-    home.packages = with pkgs; [
-      dejavu_fonts
-      jetbrains-mono
-      noto-fonts
-      noto-fonts-lgc-plus
-      texlivePackages.hebrew-fonts
-      noto-fonts-color-emoji
-      font-awesome
-      powerline-fonts
-      powerline-symbols
-      pkgs.nerd-fonts.symbols-only
-    ];
-
+  config = lib.mkIf cfg.enable { 
     stylix = {
       enable = true;
       polarity = "dark";
