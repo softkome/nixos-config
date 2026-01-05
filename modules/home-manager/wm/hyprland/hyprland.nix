@@ -5,9 +5,7 @@
   ...
 }: let
   cfg = config.features.wm.hyprland;
-  colors = builtins.fromJSON (builtins.readFile (pkgs.runCommand "base16.json" {} ''
-    ${pkgs.yq-go}/bin/yq eval -o=json ${../../../../assets/colours/gruvbox.yaml} > $out
-  ''));
+  colors = import ../../colours.nix { inherit lib;};
 in {
   config = lib.mkIf cfg.enable {
     wayland.windowManager.hyprland = {
@@ -47,8 +45,8 @@ in {
           gaps_in = 0;
           gaps_out = 0;
           border_size = 0;
-          "col.active_border" = "rgba(${colors.base06}ff)";
-          "col.inactive_border" = "rgba(${colors.base01}ff)";
+          "col.active_border" = colors.base06;
+          "col.inactive_border" = colors.base01;
           resize_on_border = true;
           allow_tearing = false;
           layout = "master";
