@@ -10,5 +10,7 @@
     ./unfree.nix
     ./stylix.nix
     ./sops.nix
+
+    ./wm/niri.nix
   ];
 }
