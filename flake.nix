@@ -39,7 +39,6 @@
         autologin = true;
         shell = "fish";
         kernel = "zen"; # or "latest" or "lts"
-        extraModules = [./modules/system/wm/hyprland.nix];
       };
     };
 
@@ -60,8 +59,7 @@
             inputs.home-manager.nixosModules.default
             stylix.nixosModules.stylix
             sops-nix.nixosModules.sops
-          ]
-          ++ cfg.extraModules;
+          ];
       };
   in {
     nixosConfigurations = nixpkgs.lib.mapAttrs mkHost hosts;
