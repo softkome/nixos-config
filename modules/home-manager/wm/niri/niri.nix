@@ -11,7 +11,8 @@ in
             "Mod+Return" = { action = "spawn"; command = ["foot"]; };
             "Mod+D" = { action = "spawn"; command = ["fuzzel"]; };
             "Mod+Q" = { action = "close-window"; };
-	};
+	  };
+        };
       };
     };
   }
