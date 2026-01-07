@@ -51,15 +51,14 @@
           homeStateVersion = cfg.stateVersion;
         };
 
-        modules =
-          [
-            ./hosts/${name}/base.nix
-            ./modules/system/user.nix
-            ./modules/system/kernel.nix
-            inputs.home-manager.nixosModules.default
-            stylix.nixosModules.stylix
-            sops-nix.nixosModules.sops
-          ];
+        modules = [
+          ./hosts/${name}/base.nix
+          ./modules/system/user.nix
+          ./modules/system/kernel.nix
+          inputs.home-manager.nixosModules.default
+          stylix.nixosModules.stylix
+          sops-nix.nixosModules.sops
+        ];
       };
   in {
     nixosConfigurations = nixpkgs.lib.mapAttrs mkHost hosts;

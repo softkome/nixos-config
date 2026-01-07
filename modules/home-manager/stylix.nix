@@ -7,7 +7,7 @@
 }: let
   cfg = config.features.theme.stylix;
 in {
-  config = lib.mkIf cfg.enable { 
+  config = lib.mkIf cfg.enable {
     stylix = {
       enable = true;
       polarity = "dark";

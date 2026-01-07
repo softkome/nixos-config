@@ -12,17 +12,17 @@ in {
       plugins = with pkgs.vimPlugins; [
         nvim-autopairs
         nvim-surround
-	nvim-colorizer-lua
+        nvim-colorizer-lua
       ];
       extraLuaConfig = ''
-        require("nvim-autopairs").setup {}
-	require("colorizer").setup ({
-	  ["*"] =  {
-	    names = false,
-	  },
-	})
-        require("nvim-surround").setup {}
-        vim.opt.number = true
+               require("nvim-autopairs").setup {}
+        require("colorizer").setup ({
+          ["*"] =  {
+            names = false,
+          },
+        })
+               require("nvim-surround").setup {}
+               vim.opt.number = true
       '';
     };
   };

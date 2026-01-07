@@ -5,7 +5,7 @@
   ...
 }: let
   cfg = config.features.wm.hyprland;
-  colors = import ../../colours.nix { inherit lib;};
+  colors = import ../../colours.nix {inherit lib;};
 in {
   config = lib.mkIf cfg.enable {
     wayland.windowManager.hyprland = {
