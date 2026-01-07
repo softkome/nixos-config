@@ -11,7 +11,6 @@
     ./stylix.nix
     ./sops.nix
 
-    ./wm/niri.nix
     ./wm/hyprland.nix
   ];
 }
