@@ -18,6 +18,11 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -25,6 +30,7 @@
     home-manager,
     stylix,
     sops-nix,
+    niri,
     ...
   } @ inputs: let
     assetsDir = ./assets;
@@ -59,6 +65,7 @@
             inputs.home-manager.nixosModules.default
             stylix.nixosModules.stylix
             sops-nix.nixosModules.sops
+	    niri.nixosModules.niri
           ];
       };
   in {
