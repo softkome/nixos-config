@@ -16,7 +16,7 @@
     ./terminal/foot.nix
 
     ./wm/hyprland
-    ./wm/niri/niri.nix
+    ./wm/niri
 
     ./ui/fuzzel/fuzzel.nix
     ./ui/swaync/swaync.nix
