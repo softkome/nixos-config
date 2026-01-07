@@ -12,6 +12,7 @@
     ./hardware-configuration.nix
     ../../modules/system
     inputs.home-manager.nixosModules.default
+    inputs.niri.homeModules.niri
   ];
 
   networking.hostName = hostname;
