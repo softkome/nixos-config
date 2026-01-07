@@ -2,6 +2,7 @@
   user,
   homeStateVersion,
   config,
+  inputs,
   ...
 }: {
   imports = [
