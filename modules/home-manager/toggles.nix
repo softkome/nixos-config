@@ -7,9 +7,6 @@
         lib.mkEnableOption "Hypridle idle daemon";
       hyprlock.enable =
         lib.mkEnableOption "Hyprlock screen locker";
-
-      niri.enable = 
-        lib.mkEnableOption "Niri window manager";
     };
 
     ui = {

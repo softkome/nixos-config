@@ -7,7 +7,6 @@
 }: {
   imports = [
     ../../modules/home-manager
-    inputs.niri.homeModules.niri
   ];
 
   home = {
@@ -21,8 +20,6 @@
       hyprland.enable = true;
       hypridle.enable = true;
       hyprlock.enable = true;
-
-      niri.enable = true;
     };
 
     ui = {
