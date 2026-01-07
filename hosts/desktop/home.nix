@@ -6,6 +6,7 @@
 }: {
   imports = [
     ../../modules/home-manager
+    inputs.niri.homeModules.niri
   ];
 
   home = {
