@@ -7,7 +7,6 @@
     vesktop # discord
     xfce.thunar # gui file manager
     protonvpn-gui # vpn
-    prismlauncher # minecraft launcher
     swww # wallpaper daemon
 
     bottom # system monitor
