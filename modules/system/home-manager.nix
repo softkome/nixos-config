@@ -5,7 +5,6 @@
   hostname,
   pkgs,
   assetsDir,
-  niri,
   ...
 }: {
   home-manager = {
@@ -13,7 +12,7 @@
     useUserPackages = true;
 
     extraSpecialArgs = {
-      inherit inputs user homeStateVersion pkgs assetsDir niri;
+      inherit inputs user homeStateVersion pkgs assetsDir;
     };
 
     users.${user} = import ../../hosts/${hostname}/home.nix;

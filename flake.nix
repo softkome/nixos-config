@@ -64,7 +64,6 @@
           inputs.home-manager.nixosModules.default
           stylix.nixosModules.stylix
           sops-nix.nixosModules.sops
-	  niri.nixosModules.niri
         ];
       };
   in {
