@@ -25,11 +25,11 @@ in {
             all-outputs = false;
             format = "{icon}";
             format-icons = {
-              "1" = "一";
-              "2" = "二";
-              "3" = "三";
-              "4" = "四";
-              "5" = "五";
+              "1" = "1";
+              "2" = "2";
+              "3" = "3";
+              "4" = "4";
+              "5" = "5";
             };
 
             persistent-workspaces = {
