@@ -15,8 +15,8 @@ in {
           layer = "top";
           position = "top";
           height = 30;
-          modules-left = ["hyprland/workspaces"];
-          modules-center = ["hyprland/window"];
+          modules-left = ["hyprland/workspaces" "niri/workspaces"];
+          modules-center = ["hyprland/window" "niri/window"];
           modules-right = ["pulseaudio" "pulseaudio#microphone" "network" "custom/power" "clock" "tray"];
           "hyprland/workspaces" = {
             disable-scroll = true;
@@ -37,9 +37,31 @@ in {
             };
           };
 
+	  "niri/workspaces" = {
+	    disable-scroll = true;
+	    show-special = true;
+	    special-visible-only = true;
+	    all-outputs = false;
+	    format = "{icon}";
+	    format-icons = {
+	      "1" = "1";
+	      "2" = "2";
+	      "3" = "3";
+	      "4" = "4";
+	      "5" = "5";
+  	    };
+  	    persistent-workspaces = {
+	      "*" = 5;
+  	    };
+	  };
+
           "hyprland/window" = {
             format = "[ {title} ]";
           };
+
+	  "niri/window" = {
+	    format = "[ {title} ]";
+	  };
 
           "custom/power" = {
             format = "<span size='large'>⏻</span>";
