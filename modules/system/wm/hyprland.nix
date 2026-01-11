@@ -4,9 +4,6 @@
     withUWSM = true;
   };
 
-  programs.niri.enable = true;
-  programs.xwayland.enable = true;
-
   security.pam.services.hyprlock = {};
 
   xdg.portal = {
@@ -17,7 +14,4 @@
     ];
   };
 
-  environment.systemPackages = with pkgs; [
-    xwayland-satellite
-  ]; 
 }

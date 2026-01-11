@@ -12,5 +12,6 @@
     ./sops.nix
 
     ./wm/hyprland.nix
+    ./wm/niri.nix
   ];
 }
