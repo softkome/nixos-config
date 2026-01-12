@@ -101,11 +101,11 @@ in {
             format-wifi = "󰤨 {essid}";
             format-ethernet = "󰈀 Wired";
             format-disconnected = "󰤮 Disconnected";
-            format-alt = "󰇚 {bandwidthDownBits} 󰕒 {bandwidthUpBits}";
             tooltip-format = "Interface: {ifname}\nIP: {ipaddr}\nSignal: {signalStrength}%";
             tooltip-format-ethernet = "Interface: {ifname}\nIP: {ipaddr}";
             tooltip-format-disconnected = "No connection";
             interval = 2;
+	    on-click = "foot -e nmtui";
           };
 
           "clock" = {

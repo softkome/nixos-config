@@ -18,12 +18,7 @@ in {
         alias se sudoedit
         alias c clear
         alias .. "cd .."
-        alias cm "c && microfetch-custom"
-
-        # Start Tmux automatically if not allready running. No Tmux is TTY
-        if test -z "$TMUX" -a -n "$DISPLAY"
-          tmux attach-session -t default; or tmux new-session -s default
-        end
+        alias cm "clear && microfetch-custom"
 
         # Start UWSM
         if uwsm check may-start > /dev/null && uwsm select

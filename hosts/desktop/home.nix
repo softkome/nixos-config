@@ -60,4 +60,5 @@
     theme.stylix.enable = true;
     env.session.enable = true;
   };
-}
+
+  }
