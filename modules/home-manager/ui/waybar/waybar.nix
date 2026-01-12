@@ -37,31 +37,31 @@ in {
             };
           };
 
-	  "niri/workspaces" = {
-	    disable-scroll = true;
-	    show-special = true;
-	    special-visible-only = true;
-	    all-outputs = false;
-	    format = "{icon}";
-	    format-icons = {
-	      "1" = "1";
-	      "2" = "2";
-	      "3" = "3";
-	      "4" = "4";
-	      "5" = "5";
-  	    };
-  	    persistent-workspaces = {
-	      "*" = 5;
-  	    };
-	  };
+          "niri/workspaces" = {
+            disable-scroll = true;
+            show-special = true;
+            special-visible-only = true;
+            all-outputs = false;
+            format = "{icon}";
+            format-icons = {
+              "1" = "1";
+              "2" = "2";
+              "3" = "3";
+              "4" = "4";
+              "5" = "5";
+            };
+            persistent-workspaces = {
+              "*" = 5;
+            };
+          };
 
           "hyprland/window" = {
             format = "[ {title} ]";
           };
 
-	  "niri/window" = {
-	    format = "[ {title} ]";
-	  };
+          "niri/window" = {
+            format = "[ {title} ]";
+          };
 
           "custom/power" = {
             format = "<span size='large'>⏻</span>";
@@ -105,7 +105,7 @@ in {
             tooltip-format-ethernet = "Interface: {ifname}\nIP: {ipaddr}";
             tooltip-format-disconnected = "No connection";
             interval = 2;
-	    on-click = "foot -e nmtui";
+            on-click = "foot -e nmtui";
           };
 
           "clock" = {
