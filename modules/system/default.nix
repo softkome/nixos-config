@@ -10,6 +10,7 @@
     ./unfree.nix
     ./stylix.nix
     ./sops.nix
+    ./uwsm.nix
 
     ./wm/hyprland.nix
     ./wm/niri.nix
