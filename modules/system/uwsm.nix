@@ -11,7 +11,6 @@
         prettyName = "Niri";
         comment = "Niri compositor managed by UWSM";
         binPath = "${pkgs.niri}/bin/niri-session";
-	#binPath = "/run/current-system/sw/bin/niri-session";
       };
     };
   };
