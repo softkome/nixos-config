@@ -53,7 +53,7 @@
 
     gui = {
       browser = {
-        qutebrowser.enable = false;
+        qutebrowser.enable = true;
       };
     };
 
