@@ -52,9 +52,6 @@
     };
 
     gui = {
-      browser = {
-        qutebrowser.enable = true;
-      };
     };
 
     theme.stylix.enable = true;

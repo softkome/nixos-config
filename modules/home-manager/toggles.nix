@@ -57,10 +57,6 @@
     };
 
     gui = {
-      browser = {
-        qutebrowser.enable =
-          lib.mkEnableOption "Qutebrowser browser";
-      };
     };
 
     theme.stylix.enable =

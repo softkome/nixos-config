@@ -10,8 +10,6 @@
     ./cli/starship.nix
     ./cli/tmux.nix
 
-    ./gui/qutebrowser.nix
-
     ./terminal/alacritty.nix
     ./terminal/foot.nix
 
